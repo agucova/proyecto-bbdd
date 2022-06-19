@@ -26,9 +26,9 @@
 
 <!-- Boton de inicio de sesión / cerrado sesión -->
 <?php if (empty($user)) : ?>
-    <button type="button" onclick="window.location.href = '/login.php'">Iniciar Sesión</button>
+    <button type="button" onclick="window.location.href = 'login.php'">Iniciar Sesión</button>
 <?php else : ?>
     <p>Bienvenido <?= $user['nombre'] ?>! 👋</p>
-    <button type="button" onclick="window.location.href = '/logout.php'">Cerrar Sesión</button>
+    <button type="button" onclick="window.location.href = 'logout.php'">Cerrar Sesión</button>
 <?php endif ?>
-<button type="button" onclick="window.location.href = '/importar.php'">Importar usuarios</button>
+<button type="button" onclick="window.location.href = 'importar.php'">Importar usuarios</button>

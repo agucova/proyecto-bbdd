@@ -3,7 +3,7 @@
 <h1>Iniciar sesión</h1>
 
 <!-- Formulario de inicio de sesión -->
-<form action="/login.php" method="post">
+<form action="login.php" method="post">
     <p><?= $error ?></p>
     <label for="username">Usuario</label>
     <input type="text" name="username" id="username" ?>
