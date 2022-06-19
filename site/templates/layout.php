@@ -17,11 +17,13 @@
 
 </head>
 
+
 <body>
     <?= $this->section('content') ?>
     <script src="static/script.js"></script>
     <!-- Cloudflare Web Analytics -->
-    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3fe8f25934704e8490eee397a5b5a5f9"}'></script><!-- End Cloudflare Web Analytics -->
+    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3fe8f25934704e8490eee397a5b5a5f9"}'></script>
+    <!-- End Cloudflare Web Analytics -->
 </body>
 
 </html>
