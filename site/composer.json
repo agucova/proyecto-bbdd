@@ -1,0 +1,7 @@
+{
+    "name": "grupo27/e2",
+    "type": "project",
+    "require": {
+        "league/plates": "^3.4"
+    }
+}

@@ -1,0 +1,3083 @@
+{
+	"tables": {
+		"af619378-6625-4c34-9228-e24e07341534": {
+			"id": "af619378-6625-4c34-9228-e24e07341534",
+			"visible": true,
+			"name": "aerolinea",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "369e6169-c281-459f-bf9b-df038c216cd9",
+					"name": "id",
+					"datatype": "serial",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "8ba7494c-b8c8-4fdf-8a0b-af688ac929c0",
+					"name": "codigo",
+					"datatype": "char",
+					"param": "3",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "99b8d0b0-becf-4fe0-8fb2-45b372962646",
+					"name": "nombre",
+					"datatype": "varchar",
+					"param": "80",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				}
+			],
+			"relations": [
+				"68e2ffb9-89e1-4f0d-bbb5-dcb0332fabbc",
+				"831b8be3-d656-4660-abb5-4c89e3aebd1d"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "57b61c5c-fb89-4eb5-9361-35811fb8dc93",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "",
+					"cols": [
+						{
+							"id": "ca342e0d-651d-4a0f-8ad8-543bad68fd94",
+							"colid": "369e6169-c281-459f-bf9b-df038c216cd9"
+						}
+					]
+				},
+				{
+					"id": "0a111752-7c6b-4425-bd99-7b26d57b6aca",
+					"isPk": false,
+					"using": "na",
+					"name": "codigo_aerolinea",
+					"cols": [
+						{
+							"id": "d84e9457-72e7-4eee-ba9f-b3e3743023b2",
+							"colid": "8ba7494c-b8c8-4fdf-8a0b-af688ac929c0"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		},
+		"929d4969-42ff-411e-8e0c-5f083788751b": {
+			"id": "929d4969-42ff-411e-8e0c-5f083788751b",
+			"visible": true,
+			"name": "trabajador",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "bba11560-d7c4-46d2-8410-a3f32466827d",
+					"name": "id",
+					"datatype": "serial",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "40adae97-f03c-48b8-a2de-dd7a4121a53e",
+					"name": "pasaporte",
+					"datatype": "varchar",
+					"param": "40",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "ab7c03f8-815a-44b7-85b7-8f650e92d255",
+					"name": "nombre",
+					"datatype": "varchar",
+					"param": "120",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "4e8b4e5f-b6f4-40c3-b427-9c7f5ba8ce79",
+					"name": "fecha_nacimiento",
+					"datatype": "date",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				}
+			],
+			"relations": [
+				"3fedae02-1b42-45d4-8e03-394e1ad59882",
+				"96e0cdc2-b92a-48a7-9a6a-d208a7bc9f8b",
+				"8c2db2be-a3f7-4ad2-8435-fccc24b00608"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "eb01ec6f-bf6f-4535-bd74-a6665d9a5059",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "",
+					"cols": [
+						{
+							"id": "c3382238-9a62-4231-94b1-72aaee7c4651",
+							"colid": "bba11560-d7c4-46d2-8410-a3f32466827d"
+						}
+					]
+				},
+				{
+					"id": "04e36571-18dd-408c-83a0-7cf7ea39cd38",
+					"isPk": false,
+					"using": "na",
+					"name": "pasaporte_tripulacion",
+					"cols": [
+						{
+							"id": "fa721983-0f66-48f4-8d08-518bf47ec4e7",
+							"colid": "40adae97-f03c-48b8-a2de-dd7a4121a53e"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		},
+		"ec8a47d9-5c79-4ea1-9031-86bf5bfb2065": {
+			"id": "ec8a47d9-5c79-4ea1-9031-86bf5bfb2065",
+			"visible": true,
+			"name": "vuelo",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "3dfbc36e-ea44-495d-b77e-5b97e92c1438",
+					"name": "id",
+					"datatype": "serial",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "53b29f32-46a7-4511-a703-bd962b5a408b",
+					"name": "id_aerolinea",
+					"datatype": "integer",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "Aerolinea"
+				},
+				{
+					"id": "d674cdcb-9e15-4cd1-bd0f-8bbd400d79f3",
+					"name": "id_origen",
+					"datatype": "integer",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "Aerodromo"
+				},
+				{
+					"id": "6c482624-e12a-4553-9fda-ea40dd4516bc",
+					"name": "id_destino",
+					"datatype": "integer",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "Aerodromo"
+				},
+				{
+					"id": "b92f9789-eddd-4728-80b9-0529f73a5fe9",
+					"name": "id_avion",
+					"datatype": "integer",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "Avion"
+				},
+				{
+					"id": "14eed718-c23f-4d4a-8875-f5f9f4f0ad16",
+					"name": "id_ruta",
+					"datatype": "integer",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "ruta"
+				},
+				{
+					"id": "0a31aaa8-b8b1-423e-b955-db8f13342493",
+					"name": "codigo",
+					"datatype": "varchar",
+					"param": "20",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "65b03782-edaa-4711-b0af-6992c0641859",
+					"name": "fecha_salida",
+					"datatype": "timestamp with time zone",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "22483d1a-6ca0-4cbe-98fc-2b6d73ca3a17",
+					"name": "fecha_llegada",
+					"datatype": "timestamp with time zone",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "9220f894-8b37-4ddf-84bf-84de37e86344",
+					"name": "velocidad",
+					"datatype": "float8",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "3bb9433e-e41e-49c2-af1d-7da5e85b4056",
+					"name": "altitud",
+					"datatype": "float8",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "edd423c5-6080-46a5-aff6-f6ac07d1f31f",
+					"name": "estado",
+					"datatype": "varchar",
+					"param": "20",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				}
+			],
+			"relations": [
+				"d3c44062-cd4f-4a84-90b4-ff1f71615c87",
+				"4d9950a1-6830-405e-8b0c-8d6182117f6b",
+				"272b8131-9913-409e-8002-395bd36f4320",
+				"4b0c54c3-5330-40e1-a41c-e8a34785bb47",
+				"68e2ffb9-89e1-4f0d-bbb5-dcb0332fabbc",
+				"f5719ddb-ca30-437a-983d-eb7a73b4461f",
+				"bd5c3970-d9ab-4b1e-93b8-23c61a60a063",
+				"0925cc4e-f2c8-4bb6-899c-1753fa7fe593"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "3ff7c76e-6b98-4ce8-8d94-6bb29fdc695d",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "",
+					"cols": [
+						{
+							"id": "f6514934-d0b0-4600-b556-defc47312acf",
+							"colid": "3dfbc36e-ea44-495d-b77e-5b97e92c1438"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		},
+		"bd723afb-103c-42e6-a145-f0504b69b1fc": {
+			"id": "bd723afb-103c-42e6-a145-f0504b69b1fc",
+			"visible": true,
+			"name": "tripulante_vuelo",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "bb13cd77-6b84-4584-a11d-94ca66a83438",
+					"name": "id_vuelo",
+					"datatype": "integer",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "Vuelo"
+				},
+				{
+					"id": "5f325414-f0a5-4b84-93f2-83b9cad062a6",
+					"name": "id_tripulante",
+					"datatype": "integer",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "trabajador"
+				}
+			],
+			"relations": [
+				"d3c44062-cd4f-4a84-90b4-ff1f71615c87",
+				"e87f81e1-e90f-4f44-b2eb-c2bc66c4bccb"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "ade816f7-2a7f-4663-89f4-ea5b9a45f285",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "",
+					"cols": [
+						{
+							"id": "33a4a41c-9616-4b31-83d8-3ebc533a7804",
+							"colid": "bb13cd77-6b84-4584-a11d-94ca66a83438"
+						},
+						{
+							"id": "aab45d54-dca1-455f-9b06-a68e9b6b70eb",
+							"colid": "5f325414-f0a5-4b84-93f2-83b9cad062a6"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		},
+		"f637d5c9-09a8-4907-bb4f-3d37c668cbd9": {
+			"id": "f637d5c9-09a8-4907-bb4f-3d37c668cbd9",
+			"visible": true,
+			"name": "aerodromo",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "6ff7bc4b-054d-4e97-8482-95bfca37bb9d",
+					"name": "id",
+					"datatype": "serial",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "e5f0bb47-00a3-458b-9d3f-c293c81c16fd",
+					"name": "icao",
+					"datatype": "char",
+					"param": "4",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "f46a0680-7a69-40cd-ae33-a7fd62b46537",
+					"name": "iata",
+					"datatype": "char",
+					"param": "3",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "6dcddf09-bed0-4f61-a3f8-9c682d271951",
+					"name": "id_ciudad",
+					"datatype": "integer",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "Ciudad"
+				},
+				{
+					"id": "5fb35d6f-be8f-46d6-9bd4-e692a235dfea",
+					"name": "nombre",
+					"datatype": "varchar",
+					"param": "120",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "a64ebc60-7cf1-45db-b53f-542fb4db1ffb",
+					"name": "posicion",
+					"datatype": "point",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				}
+			],
+			"relations": [
+				"8a56aed3-1187-4053-886d-e65bdc1aa131",
+				"272b8131-9913-409e-8002-395bd36f4320",
+				"4b0c54c3-5330-40e1-a41c-e8a34785bb47"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "42ddbaba-9883-488e-bc3b-27b568a19697",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "",
+					"cols": [
+						{
+							"id": "29703e63-a122-46d5-9f94-ff1c348afc46",
+							"colid": "6ff7bc4b-054d-4e97-8482-95bfca37bb9d"
+						}
+					]
+				},
+				{
+					"id": "e6a6f516-a7b3-4b49-85d2-e88f5731657b",
+					"isPk": false,
+					"using": "na",
+					"name": "icao",
+					"cols": [
+						{
+							"id": "bdb7dd98-ca2d-4290-8d90-37280809a6d5",
+							"colid": "e5f0bb47-00a3-458b-9d3f-c293c81c16fd"
+						}
+					]
+				},
+				{
+					"id": "05c5472e-dd8f-49a5-abb6-e3d5b9558ccf",
+					"isPk": false,
+					"using": "na",
+					"name": "iata",
+					"cols": [
+						{
+							"id": "c1875604-c463-4734-8418-00b11993f471",
+							"colid": "f46a0680-7a69-40cd-ae33-a7fd62b46537"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		},
+		"63d1cbb5-3fe5-47ed-9070-e6631e14e30f": {
+			"id": "63d1cbb5-3fe5-47ed-9070-e6631e14e30f",
+			"visible": true,
+			"name": "ciudad",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "12943709-3b3f-4317-9603-7da431777ed2",
+					"name": "id",
+					"datatype": "integer",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "66882aa1-17d1-4383-b710-2cc0f47caaf5",
+					"name": "id_pais",
+					"datatype": "integer",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "pais"
+				},
+				{
+					"id": "522defb9-60c9-48a9-9edf-b0bacd3593f9",
+					"name": "nombre",
+					"datatype": "varchar",
+					"param": "60",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				}
+			],
+			"relations": [
+				"8a56aed3-1187-4053-886d-e65bdc1aa131",
+				"c337c607-0d49-4b5b-8748-d5b4d783cbac"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "bd03ce79-931e-4aa8-b39d-064b5a537d52",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "",
+					"cols": [
+						{
+							"id": "8348a32b-7a7f-4b34-9914-ce942a924417",
+							"colid": "12943709-3b3f-4317-9603-7da431777ed2"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		},
+		"5a49e698-c7ef-4c54-be4c-66a6793150f1": {
+			"id": "5a49e698-c7ef-4c54-be4c-66a6793150f1",
+			"visible": true,
+			"name": "punto_ruta",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "da2143cb-0e77-42cf-89bc-bcea2ca2cdec",
+					"name": "id_ruta",
+					"datatype": "integer",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "ruta"
+				},
+				{
+					"id": "2d91a908-6b81-4b2e-ac11-4ee8360e68a0",
+					"name": "indice",
+					"datatype": "integer",
+					"param": "",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "3b7005c0-9cc2-4735-ac3e-ae1dd113ddd3",
+					"name": "nombre",
+					"datatype": "varchar",
+					"param": "100",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "e7c97efe-a3f1-407b-8b6c-adfc4fd6ee22",
+					"name": "posicion",
+					"datatype": "point",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				}
+			],
+			"relations": [
+				"ea1d0680-3ae2-4b70-b0e4-3f41fdc2ed3c"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "45e8c3b2-9289-4dc3-9443-34695962d14d",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "",
+					"cols": [
+						{
+							"id": "ce125754-3e20-4dfd-a7af-d1f765b6428c",
+							"colid": "2d91a908-6b81-4b2e-ac11-4ee8360e68a0"
+						},
+						{
+							"id": "24054ca1-9ff7-4ba6-86b2-19092d769ef7",
+							"colid": "da2143cb-0e77-42cf-89bc-bcea2ca2cdec"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		},
+		"4fe2a5e3-d7d8-4691-97f4-cdae81aec55e": {
+			"id": "4fe2a5e3-d7d8-4691-97f4-cdae81aec55e",
+			"visible": true,
+			"name": "pasajero",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "58744185-5319-4943-ad92-dd7dde48b3a0",
+					"name": "id",
+					"datatype": "serial",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "f9c70b24-31b5-4fef-9c26-75d2d2363389",
+					"name": "pasaporte",
+					"datatype": "varchar",
+					"param": "40",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "9c5b71bc-6538-4700-b593-2f9de8be3a04",
+					"name": "nombre",
+					"datatype": "varchar",
+					"param": "50",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "00cb2168-361a-4841-a2af-fec3f379a18c",
+					"name": "fecha_nacimiento",
+					"datatype": "date",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "e5bd5b16-7493-495a-830a-145d35ade438",
+					"name": "nacionalidad",
+					"datatype": "varchar",
+					"param": "50",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				}
+			],
+			"relations": [
+				"a7e09b26-defe-43b7-af3c-30d372cf72f9",
+				"c9209aec-143a-4c44-93bb-0cc5a18bbbff"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "8a6a21d4-f715-4f87-9227-7ed35693b1cd",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "",
+					"cols": [
+						{
+							"id": "628e03c4-2159-446f-9627-f0ef83c1e580",
+							"colid": "58744185-5319-4943-ad92-dd7dde48b3a0"
+						}
+					]
+				},
+				{
+					"id": "375e7bfb-f31e-4745-bd2e-cd07ee7eed90",
+					"isPk": false,
+					"using": "na",
+					"name": "pasaporte_pasajero",
+					"cols": [
+						{
+							"id": "38941d45-d913-4eec-ae5e-2bdc97e17c8f",
+							"colid": "f9c70b24-31b5-4fef-9c26-75d2d2363389"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		},
+		"8bacbe65-da3f-4baf-9001-9a40943b9bf2": {
+			"id": "8bacbe65-da3f-4baf-9001-9a40943b9bf2",
+			"visible": true,
+			"name": "reserva",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "609db34a-2cdc-4838-bfd2-1d028e7250d6",
+					"name": "id",
+					"datatype": "integer",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "2003d42b-32f0-4c0d-bb2f-d818de1e9612",
+					"name": "codigo",
+					"datatype": "varchar",
+					"param": "12",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "20ef76df-1d56-404c-8bce-4c51140b8d39",
+					"name": "id_reservante",
+					"datatype": "integer",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "Pasajero"
+				}
+			],
+			"relations": [
+				"c9209aec-143a-4c44-93bb-0cc5a18bbbff",
+				"4423d01b-be16-4f06-bac5-d9c5e5c893d2"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "f1d08de7-63b4-41bb-b202-78a786f2f5e4",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "",
+					"cols": [
+						{
+							"id": "cf993f5a-bc4c-41fb-bac3-91109d150fbf",
+							"colid": "609db34a-2cdc-4838-bfd2-1d028e7250d6"
+						}
+					]
+				},
+				{
+					"id": "66b889a2-9438-4bea-864f-ea4eb595288d",
+					"isPk": false,
+					"using": "na",
+					"name": "codigo_reserva",
+					"cols": [
+						{
+							"id": "c2d2bfd0-4e7a-4df2-a7b8-5d0accd5bd51",
+							"colid": "2003d42b-32f0-4c0d-bb2f-d818de1e9612"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		},
+		"199e52d5-a8dd-4c10-a8df-01c8941987b2": {
+			"id": "199e52d5-a8dd-4c10-a8df-01c8941987b2",
+			"visible": true,
+			"name": "ticket",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "71f59ef0-b2b9-42c5-9604-35f94cb6d71e",
+					"name": "id",
+					"datatype": "integer",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "9644558a-bbb6-44c3-8e83-4adecace6e6a",
+					"name": "id_vuelo",
+					"datatype": "integer",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "Vuelo"
+				},
+				{
+					"id": "565854b9-b185-4b70-907e-1642fd0cef56",
+					"name": "id_pasajero",
+					"datatype": "integer",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "Pasajero"
+				},
+				{
+					"id": "ef00e4a1-eec8-4fdd-a7a9-c295f1d83ae0",
+					"name": "id_reserva",
+					"datatype": "integer",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "reserva"
+				},
+				{
+					"id": "4f2beb09-befe-43a8-8238-dd1ed892e6c8",
+					"name": "asiento",
+					"datatype": "integer",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "925bd472-f379-4a44-a43c-998b8f06a3f8",
+					"name": "clase",
+					"datatype": "varchar",
+					"param": "20",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "a0103193-0cb5-4620-8388-b85abc4295d0",
+					"name": "comida_y_maleta",
+					"datatype": "boolean",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				}
+			],
+			"relations": [
+				"4d9950a1-6830-405e-8b0c-8d6182117f6b",
+				"a7e09b26-defe-43b7-af3c-30d372cf72f9",
+				"4423d01b-be16-4f06-bac5-d9c5e5c893d2"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "994b7cc2-e1e5-4d55-98a4-c6d7d8782b06",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "",
+					"cols": [
+						{
+							"id": "a629c645-74ee-4a7b-8ab0-47700ceb6ac8",
+							"colid": "71f59ef0-b2b9-42c5-9604-35f94cb6d71e"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		},
+		"adb337c8-80f9-4ba3-9d52-7bb5cb3972d3": {
+			"id": "adb337c8-80f9-4ba3-9d52-7bb5cb3972d3",
+			"visible": true,
+			"name": "costo",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "689c6689-ae60-4d63-acf4-b41fbc5d8806",
+					"name": "id_ruta",
+					"datatype": "integer",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "ruta"
+				},
+				{
+					"id": "e7230533-71ca-42c1-994b-d246d2bc20b1",
+					"name": "id_modelo",
+					"datatype": "integer",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "modelo"
+				},
+				{
+					"id": "31fb2320-0245-4372-b1ad-814a78edd6cb",
+					"name": "monto",
+					"datatype": "numeric",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				}
+			],
+			"relations": [
+				"c38c27c4-ca0c-4604-b744-c4bd56a7b610",
+				"65326d90-fe5f-4558-b5bd-0a648a20ffd2"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "81d5fdb3-559d-4b82-92ec-15462c8b2dca",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "",
+					"cols": [
+						{
+							"id": "d34d6c6e-e542-4753-b021-41745e55fcef",
+							"colid": "689c6689-ae60-4d63-acf4-b41fbc5d8806"
+						},
+						{
+							"id": "0294e9f1-8965-48a2-a157-e6b85c683f8e",
+							"colid": "e7230533-71ca-42c1-994b-d246d2bc20b1"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		},
+		"a154b91e-50e7-46d8-ba6c-6c016908b7cc": {
+			"id": "a154b91e-50e7-46d8-ba6c-6c016908b7cc",
+			"visible": true,
+			"name": "avion",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "9079e132-2d5b-41a2-9095-9eab56a31595",
+					"name": "id",
+					"datatype": "serial",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "19b80f35-39ff-428d-84e0-492f17cd7a82",
+					"name": "codigo",
+					"datatype": "char",
+					"param": "7",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "2dffcab0-8a32-4c49-9519-537f08b8856a",
+					"name": "id_modelo",
+					"datatype": "integer",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "modelo"
+				}
+			],
+			"relations": [
+				"f5719ddb-ca30-437a-983d-eb7a73b4461f",
+				"0ee58526-8bea-47eb-8d55-24a93e02fba6"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "8813cd8b-15a1-4f87-9ca3-523332d1d4b4",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "",
+					"cols": [
+						{
+							"id": "77da0ea6-6242-4b78-bcc4-fbcc17bbe3cc",
+							"colid": "9079e132-2d5b-41a2-9095-9eab56a31595"
+						}
+					]
+				},
+				{
+					"id": "70c59dda-a3ee-41a9-bc20-b328e2700010",
+					"isPk": false,
+					"using": "na",
+					"name": "Codigo",
+					"cols": [
+						{
+							"id": "3336e6cd-93e3-454f-8420-dd0adf4a86a4",
+							"colid": "19b80f35-39ff-428d-84e0-492f17cd7a82"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		},
+		"e57be351-c706-49b5-a379-7042eaa3900d": {
+			"id": "e57be351-c706-49b5-a379-7042eaa3900d",
+			"visible": true,
+			"name": "ruta",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "5dde0893-4b67-4bb6-b5f2-2afc24c66d12",
+					"name": "id",
+					"datatype": "serial",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "cea23ab3-3d20-46f9-981e-04c7040903cc",
+					"name": "nombre",
+					"datatype": "varchar",
+					"param": "6",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				}
+			],
+			"relations": [
+				"ea1d0680-3ae2-4b70-b0e4-3f41fdc2ed3c",
+				"c38c27c4-ca0c-4604-b744-c4bd56a7b610",
+				"bd5c3970-d9ab-4b1e-93b8-23c61a60a063"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "0d2017a1-001c-47db-946c-52dcd8759e7a",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "",
+					"cols": [
+						{
+							"id": "eebd7126-9d3d-4200-a1e3-bce5cf49cc59",
+							"colid": "5dde0893-4b67-4bb6-b5f2-2afc24c66d12"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		},
+		"086bd3c6-ba68-4c31-b73e-ee9e2d09f17c": {
+			"id": "086bd3c6-ba68-4c31-b73e-ee9e2d09f17c",
+			"visible": true,
+			"name": "pais",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "adc94c19-9733-4702-8c2e-6397214fe58b",
+					"name": "id",
+					"datatype": "serial",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "1c8f831e-6170-415c-9a96-de3e52a6b84c",
+					"name": "nombre",
+					"datatype": "varchar",
+					"param": "80",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				}
+			],
+			"relations": [
+				"c337c607-0d49-4b5b-8748-d5b4d783cbac"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "d3d570e5-d035-4835-b4ac-fce1683ddb46",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "",
+					"cols": [
+						{
+							"id": "96e89651-8ab0-4583-86bb-3fa167cb62b8",
+							"colid": "adc94c19-9733-4702-8c2e-6397214fe58b"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		},
+		"6c3bea6f-acb1-42fe-9836-e451fa78b0b9": {
+			"id": "6c3bea6f-acb1-42fe-9836-e451fa78b0b9",
+			"visible": true,
+			"name": "piloto",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "55b97e49-5309-4ad4-b871-8b310dd910c2",
+					"name": "id_trabajador",
+					"datatype": "integer",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "trabajador"
+				}
+			],
+			"relations": [
+				"39afadeb-368a-44e8-9f21-adb0161613ba",
+				"6c78b92a-9edc-415c-a220-f26f6567cbc0",
+				"96e0cdc2-b92a-48a7-9a6a-d208a7bc9f8b"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "fc06f24c-0bad-4c4b-9bda-be1ab245f7b4",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "",
+					"cols": [
+						{
+							"id": "dcddfc07-f2a2-42f7-8ef9-d4dbedc3cf88",
+							"colid": "55b97e49-5309-4ad4-b871-8b310dd910c2"
+						}
+					]
+				},
+				{
+					"id": "03c2ac06-282d-4c5f-8879-c74ba40bfaa8",
+					"isPk": false,
+					"using": "na",
+					"name": "pasaporte_piloto",
+					"cols": []
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		},
+		"06d9ffdd-bfdc-43ec-b540-55eee454f0e1": {
+			"id": "06d9ffdd-bfdc-43ec-b540-55eee454f0e1",
+			"visible": true,
+			"name": "licencia",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "1034705b-c197-4ac3-978c-acdcef0e89d0",
+					"name": "id",
+					"datatype": "integer",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "0e56800b-5354-482d-b926-bf7e17282f38",
+					"name": "id_piloto",
+					"datatype": "integer",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "trabajador"
+				}
+			],
+			"relations": [
+				"39afadeb-368a-44e8-9f21-adb0161613ba",
+				"1de0773c-9f46-443b-9a54-782004316a73"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "3c3be1f5-01eb-491f-bb55-5421719a1718",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "",
+					"cols": [
+						{
+							"id": "184bb37d-7ed6-4778-8db9-5c8366b36099",
+							"colid": "1034705b-c197-4ac3-978c-acdcef0e89d0"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		},
+		"ea5d3b8b-8644-451b-9211-1d66fa312ea3": {
+			"id": "ea5d3b8b-8644-451b-9211-1d66fa312ea3",
+			"visible": true,
+			"name": "piloto_vuelo",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "0dd3d958-9c18-4fbb-abee-b31fc87411fc",
+					"name": "id_vuelo",
+					"datatype": "integer",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "vuelo"
+				},
+				{
+					"id": "03f31fe6-bfaa-4f3e-aa22-061535fbc87e",
+					"name": "id_piloto",
+					"datatype": "integer",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "trabajador"
+				},
+				{
+					"id": "e143e112-bc04-40ba-8aab-13adc8ae81b0",
+					"name": "id_licencia",
+					"datatype": "integer",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "licencia"
+				},
+				{
+					"id": "568dd503-350d-4353-be10-9ff09268b155",
+					"name": "rol",
+					"datatype": "char",
+					"param": "30",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				}
+			],
+			"relations": [
+				"0925cc4e-f2c8-4bb6-899c-1753fa7fe593",
+				"6c78b92a-9edc-415c-a220-f26f6567cbc0",
+				"1de0773c-9f46-443b-9a54-782004316a73"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "0fdf0204-5bc4-48b2-bc83-8e3c2b1355ee",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "",
+					"cols": [
+						{
+							"id": "5de9d3b2-fe89-4b75-874b-0348bbbb86cf",
+							"colid": "0dd3d958-9c18-4fbb-abee-b31fc87411fc"
+						},
+						{
+							"id": "4dad3e82-f386-48a4-8d85-eac057c7af04",
+							"colid": "03f31fe6-bfaa-4f3e-aa22-061535fbc87e"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		},
+		"c9addb59-c8c4-4dbd-a520-0095cb5c24f2": {
+			"id": "c9addb59-c8c4-4dbd-a520-0095cb5c24f2",
+			"visible": true,
+			"name": "modelo",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "ad3dd54f-0ee8-4599-b952-97e6b333d3f4",
+					"name": "id",
+					"datatype": "integer",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "0296a1b5-bf56-439c-a1d7-fb0f505ab1e9",
+					"name": "peso",
+					"datatype": "float8",
+					"param": "120",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "265d3fdf-e017-484d-982b-a20df4a94a9b",
+					"name": "codigo",
+					"datatype": "varchar",
+					"param": "40",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "ad23f693-94ac-4aee-b742-2a3f58f73a32",
+					"name": "nombre",
+					"datatype": "varchar",
+					"param": "100",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				}
+			],
+			"relations": [
+				"0ee58526-8bea-47eb-8d55-24a93e02fba6",
+				"65326d90-fe5f-4558-b5bd-0a648a20ffd2"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "8462cc1c-29fa-4d67-9427-42bfe953d678",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "",
+					"cols": [
+						{
+							"id": "94dbe555-5409-45d2-82df-309a993fe694",
+							"colid": "ad3dd54f-0ee8-4599-b952-97e6b333d3f4"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		},
+		"07c55446-2e03-423d-83b5-8732b39b33cc": {
+			"id": "07c55446-2e03-423d-83b5-8732b39b33cc",
+			"visible": true,
+			"name": "trabajador_aerolinea",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "fd4ae6d8-8398-4a52-980f-41ffd5201c8d",
+					"name": "id_trabajador",
+					"datatype": "integer",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "trabajador"
+				},
+				{
+					"id": "12cb76e0-8ddc-491e-a0d2-4db4714fc2e5",
+					"name": "id_aerolinea",
+					"datatype": "integer",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "aerolinea"
+				}
+			],
+			"relations": [
+				"3fedae02-1b42-45d4-8e03-394e1ad59882",
+				"831b8be3-d656-4660-abb5-4c89e3aebd1d"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "798b21d3-ce57-4493-87b6-5b0ec77db154",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "",
+					"cols": [
+						{
+							"id": "79c3ef1b-c1cf-4338-bc08-c59df692b68f",
+							"colid": "fd4ae6d8-8398-4a52-980f-41ffd5201c8d"
+						},
+						{
+							"id": "58c04fcb-2db8-489f-9c84-dd68805f257c",
+							"colid": "12cb76e0-8ddc-491e-a0d2-4db4714fc2e5"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		},
+		"c5aadf83-07fc-4ee4-b81b-b5d75ea73b12": {
+			"id": "c5aadf83-07fc-4ee4-b81b-b5d75ea73b12",
+			"visible": true,
+			"name": "tripulante",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "e138e822-85d8-470c-b2d5-f568a994c344",
+					"name": "id_trabajador",
+					"datatype": "integer",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "trabajador"
+				},
+				{
+					"id": "a709ae75-9188-472c-b3fd-ab58945b4d9f",
+					"name": "rol",
+					"datatype": "varchar",
+					"param": "50",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				}
+			],
+			"relations": [
+				"e87f81e1-e90f-4f44-b2eb-c2bc66c4bccb",
+				"8c2db2be-a3f7-4ad2-8435-fccc24b00608"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "6f2251d9-05a6-404a-aace-9255b080b181",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "",
+					"cols": [
+						{
+							"id": "a73c5697-c990-45cb-999c-60713937ea6f",
+							"colid": "e138e822-85d8-470c-b2d5-f568a994c344"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		}
+	},
+	"relations": {
+		"d3c44062-cd4f-4a84-90b4-ff1f71615c87": {
+			"id": "d3c44062-cd4f-4a84-90b4-ff1f71615c87",
+			"visible": true,
+			"name": "vuelo_tripulacionvuelo",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "3ff7c76e-6b98-4ce8-8d94-6bb29fdc695d",
+			"parent": "ec8a47d9-5c79-4ea1-9031-86bf5bfb2065",
+			"child": "bd723afb-103c-42e6-a145-f0504b69b1fc",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "many",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "7a1e97d8-d3c4-4df7-837b-ad24fef947d7",
+					"parentcol": "3dfbc36e-ea44-495d-b77e-5b97e92c1438",
+					"childcol": "bb13cd77-6b84-4584-a11d-94ca66a83438"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"8a56aed3-1187-4053-886d-e65bdc1aa131": {
+			"id": "8a56aed3-1187-4053-886d-e65bdc1aa131",
+			"visible": true,
+			"name": "ciudad_aerodromo",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "bd03ce79-931e-4aa8-b39d-064b5a537d52",
+			"parent": "63d1cbb5-3fe5-47ed-9070-e6631e14e30f",
+			"child": "f637d5c9-09a8-4907-bb4f-3d37c668cbd9",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "913744ff-4dc8-47de-af59-ab22b8d29c65",
+					"parentcol": "12943709-3b3f-4317-9603-7da431777ed2",
+					"childcol": "6dcddf09-bed0-4f61-a3f8-9c682d271951"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"4d9950a1-6830-405e-8b0c-8d6182117f6b": {
+			"id": "4d9950a1-6830-405e-8b0c-8d6182117f6b",
+			"visible": true,
+			"name": "vuelo_ticket",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "3ff7c76e-6b98-4ce8-8d94-6bb29fdc695d",
+			"parent": "ec8a47d9-5c79-4ea1-9031-86bf5bfb2065",
+			"child": "199e52d5-a8dd-4c10-a8df-01c8941987b2",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "f13eb911-39f9-41da-8f63-ab5dc1d25dc7",
+					"parentcol": "3dfbc36e-ea44-495d-b77e-5b97e92c1438",
+					"childcol": "9644558a-bbb6-44c3-8e83-4adecace6e6a"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"a7e09b26-defe-43b7-af3c-30d372cf72f9": {
+			"id": "a7e09b26-defe-43b7-af3c-30d372cf72f9",
+			"visible": true,
+			"name": "pasajero_ticket",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "8a6a21d4-f715-4f87-9227-7ed35693b1cd",
+			"parent": "4fe2a5e3-d7d8-4691-97f4-cdae81aec55e",
+			"child": "199e52d5-a8dd-4c10-a8df-01c8941987b2",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "5ccb5cec-cdc0-463d-990c-e214d69aa928",
+					"parentcol": "58744185-5319-4943-ad92-dd7dde48b3a0",
+					"childcol": "565854b9-b185-4b70-907e-1642fd0cef56"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"c9209aec-143a-4c44-93bb-0cc5a18bbbff": {
+			"id": "c9209aec-143a-4c44-93bb-0cc5a18bbbff",
+			"visible": true,
+			"name": "pasajero_reserva",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "8a6a21d4-f715-4f87-9227-7ed35693b1cd",
+			"parent": "4fe2a5e3-d7d8-4691-97f4-cdae81aec55e",
+			"child": "8bacbe65-da3f-4baf-9001-9a40943b9bf2",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "dc28cf9e-209b-4d0d-8166-836e697b9308",
+					"parentcol": "58744185-5319-4943-ad92-dd7dde48b3a0",
+					"childcol": "20ef76df-1d56-404c-8bce-4c51140b8d39"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"272b8131-9913-409e-8002-395bd36f4320": {
+			"id": "272b8131-9913-409e-8002-395bd36f4320",
+			"visible": true,
+			"name": "origen_vuelo",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "42ddbaba-9883-488e-bc3b-27b568a19697",
+			"parent": "f637d5c9-09a8-4907-bb4f-3d37c668cbd9",
+			"child": "ec8a47d9-5c79-4ea1-9031-86bf5bfb2065",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "288fb803-8dd9-4c7e-86fe-72c18700dc5a",
+					"parentcol": "6ff7bc4b-054d-4e97-8482-95bfca37bb9d",
+					"childcol": "d674cdcb-9e15-4cd1-bd0f-8bbd400d79f3"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true,
+			"ri_pd": "na",
+			"ri_pu": "na"
+		},
+		"4b0c54c3-5330-40e1-a41c-e8a34785bb47": {
+			"id": "4b0c54c3-5330-40e1-a41c-e8a34785bb47",
+			"visible": true,
+			"name": "destino_vuelo",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "42ddbaba-9883-488e-bc3b-27b568a19697",
+			"parent": "f637d5c9-09a8-4907-bb4f-3d37c668cbd9",
+			"child": "ec8a47d9-5c79-4ea1-9031-86bf5bfb2065",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "7a793ea0-0e9b-4c45-b144-ce53909fea63",
+					"parentcol": "6ff7bc4b-054d-4e97-8482-95bfca37bb9d",
+					"childcol": "6c482624-e12a-4553-9fda-ea40dd4516bc"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"68e2ffb9-89e1-4f0d-bbb5-dcb0332fabbc": {
+			"id": "68e2ffb9-89e1-4f0d-bbb5-dcb0332fabbc",
+			"visible": true,
+			"name": "aerolinea_vuelo",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "57b61c5c-fb89-4eb5-9361-35811fb8dc93",
+			"parent": "af619378-6625-4c34-9228-e24e07341534",
+			"child": "ec8a47d9-5c79-4ea1-9031-86bf5bfb2065",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "6dbf9827-bd7e-4f29-87d9-550c7f415825",
+					"parentcol": "369e6169-c281-459f-bf9b-df038c216cd9",
+					"childcol": "53b29f32-46a7-4511-a703-bd962b5a408b"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"f5719ddb-ca30-437a-983d-eb7a73b4461f": {
+			"id": "f5719ddb-ca30-437a-983d-eb7a73b4461f",
+			"visible": true,
+			"name": "avion_vuelo",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "8813cd8b-15a1-4f87-9ca3-523332d1d4b4",
+			"parent": "a154b91e-50e7-46d8-ba6c-6c016908b7cc",
+			"child": "ec8a47d9-5c79-4ea1-9031-86bf5bfb2065",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "many",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "8f1ba8ff-3ad2-46bb-a092-25ae2f09bc29",
+					"parentcol": "9079e132-2d5b-41a2-9095-9eab56a31595",
+					"childcol": "b92f9789-eddd-4728-80b9-0529f73a5fe9"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"ea1d0680-3ae2-4b70-b0e4-3f41fdc2ed3c": {
+			"id": "ea1d0680-3ae2-4b70-b0e4-3f41fdc2ed3c",
+			"visible": true,
+			"name": "ruta_punto_ruta",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "0d2017a1-001c-47db-946c-52dcd8759e7a",
+			"parent": "e57be351-c706-49b5-a379-7042eaa3900d",
+			"child": "5a49e698-c7ef-4c54-be4c-66a6793150f1",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "d3f08bcc-7a51-441c-a1c0-8538e781516d",
+					"parentcol": "5dde0893-4b67-4bb6-b5f2-2afc24c66d12",
+					"childcol": "da2143cb-0e77-42cf-89bc-bcea2ca2cdec"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"c38c27c4-ca0c-4604-b744-c4bd56a7b610": {
+			"id": "c38c27c4-ca0c-4604-b744-c4bd56a7b610",
+			"visible": true,
+			"name": "ruta_costo",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "0d2017a1-001c-47db-946c-52dcd8759e7a",
+			"parent": "e57be351-c706-49b5-a379-7042eaa3900d",
+			"child": "adb337c8-80f9-4ba3-9d52-7bb5cb3972d3",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "0f9358c0-0ec6-4a9d-9553-85fca041fddb",
+					"parentcol": "5dde0893-4b67-4bb6-b5f2-2afc24c66d12",
+					"childcol": "689c6689-ae60-4d63-acf4-b41fbc5d8806"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"bd5c3970-d9ab-4b1e-93b8-23c61a60a063": {
+			"id": "bd5c3970-d9ab-4b1e-93b8-23c61a60a063",
+			"visible": true,
+			"name": "ruta_vuelo",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "0d2017a1-001c-47db-946c-52dcd8759e7a",
+			"parent": "e57be351-c706-49b5-a379-7042eaa3900d",
+			"child": "ec8a47d9-5c79-4ea1-9031-86bf5bfb2065",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "789df41a-49f0-435a-920c-5180c6718326",
+					"parentcol": "5dde0893-4b67-4bb6-b5f2-2afc24c66d12",
+					"childcol": "14eed718-c23f-4d4a-8875-f5f9f4f0ad16"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"4423d01b-be16-4f06-bac5-d9c5e5c893d2": {
+			"id": "4423d01b-be16-4f06-bac5-d9c5e5c893d2",
+			"visible": true,
+			"name": "reserva_ticket",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "f1d08de7-63b4-41bb-b202-78a786f2f5e4",
+			"parent": "8bacbe65-da3f-4baf-9001-9a40943b9bf2",
+			"child": "199e52d5-a8dd-4c10-a8df-01c8941987b2",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "b7347407-4a1b-4fd7-ba16-4f773aa17e0a",
+					"parentcol": "609db34a-2cdc-4838-bfd2-1d028e7250d6",
+					"childcol": "ef00e4a1-eec8-4fdd-a7a9-c295f1d83ae0"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"c337c607-0d49-4b5b-8748-d5b4d783cbac": {
+			"id": "c337c607-0d49-4b5b-8748-d5b4d783cbac",
+			"visible": true,
+			"name": "pais_ciudad",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "d3d570e5-d035-4835-b4ac-fce1683ddb46",
+			"parent": "086bd3c6-ba68-4c31-b73e-ee9e2d09f17c",
+			"child": "63d1cbb5-3fe5-47ed-9070-e6631e14e30f",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "5b7aa333-5888-4711-9a22-35d419882187",
+					"parentcol": "adc94c19-9733-4702-8c2e-6397214fe58b",
+					"childcol": "66882aa1-17d1-4383-b710-2cc0f47caaf5"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"39afadeb-368a-44e8-9f21-adb0161613ba": {
+			"id": "39afadeb-368a-44e8-9f21-adb0161613ba",
+			"visible": true,
+			"name": "piloto_licencia",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "fc06f24c-0bad-4c4b-9bda-be1ab245f7b4",
+			"parent": "6c3bea6f-acb1-42fe-9836-e451fa78b0b9",
+			"child": "06d9ffdd-bfdc-43ec-b540-55eee454f0e1",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "a63e606e-44c6-435c-8d3b-9fcecfc7641f",
+					"parentcol": "55b97e49-5309-4ad4-b871-8b310dd910c2",
+					"childcol": "0e56800b-5354-482d-b926-bf7e17282f38"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"0925cc4e-f2c8-4bb6-899c-1753fa7fe593": {
+			"id": "0925cc4e-f2c8-4bb6-899c-1753fa7fe593",
+			"visible": true,
+			"name": "vuelo_maneja",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "3ff7c76e-6b98-4ce8-8d94-6bb29fdc695d",
+			"parent": "ec8a47d9-5c79-4ea1-9031-86bf5bfb2065",
+			"child": "ea5d3b8b-8644-451b-9211-1d66fa312ea3",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "8149bca6-b1f6-4bc5-a2b0-e0e8a72f6c5d",
+					"parentcol": "3dfbc36e-ea44-495d-b77e-5b97e92c1438",
+					"childcol": "0dd3d958-9c18-4fbb-abee-b31fc87411fc"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"1de0773c-9f46-443b-9a54-782004316a73": {
+			"id": "1de0773c-9f46-443b-9a54-782004316a73",
+			"visible": true,
+			"name": "licencia_maneja",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "3c3be1f5-01eb-491f-bb55-5421719a1718",
+			"parent": "06d9ffdd-bfdc-43ec-b540-55eee454f0e1",
+			"child": "ea5d3b8b-8644-451b-9211-1d66fa312ea3",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "8fe4fe0f-0351-470a-ab0e-36119896a300",
+					"parentcol": "1034705b-c197-4ac3-978c-acdcef0e89d0",
+					"childcol": "e143e112-bc04-40ba-8aab-13adc8ae81b0"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"6c78b92a-9edc-415c-a220-f26f6567cbc0": {
+			"id": "6c78b92a-9edc-415c-a220-f26f6567cbc0",
+			"visible": true,
+			"name": "piloto_maneja",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "fc06f24c-0bad-4c4b-9bda-be1ab245f7b4",
+			"parent": "6c3bea6f-acb1-42fe-9836-e451fa78b0b9",
+			"child": "ea5d3b8b-8644-451b-9211-1d66fa312ea3",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "fcc54090-0454-48c4-a0e2-157244869069",
+					"parentcol": "55b97e49-5309-4ad4-b871-8b310dd910c2",
+					"childcol": "03f31fe6-bfaa-4f3e-aa22-061535fbc87e"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"0ee58526-8bea-47eb-8d55-24a93e02fba6": {
+			"id": "0ee58526-8bea-47eb-8d55-24a93e02fba6",
+			"visible": true,
+			"name": "modelo_avion",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "8462cc1c-29fa-4d67-9427-42bfe953d678",
+			"parent": "c9addb59-c8c4-4dbd-a520-0095cb5c24f2",
+			"child": "a154b91e-50e7-46d8-ba6c-6c016908b7cc",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "bc1efe95-2628-4cdb-b0f2-09c1375f23be",
+					"parentcol": "ad3dd54f-0ee8-4599-b952-97e6b333d3f4",
+					"childcol": "2dffcab0-8a32-4c49-9519-537f08b8856a"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"65326d90-fe5f-4558-b5bd-0a648a20ffd2": {
+			"id": "65326d90-fe5f-4558-b5bd-0a648a20ffd2",
+			"visible": true,
+			"name": "modelo_costo",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "8462cc1c-29fa-4d67-9427-42bfe953d678",
+			"parent": "c9addb59-c8c4-4dbd-a520-0095cb5c24f2",
+			"child": "adb337c8-80f9-4ba3-9d52-7bb5cb3972d3",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "1b9c40c4-d433-4ccc-8842-4a5514ea0957",
+					"parentcol": "ad3dd54f-0ee8-4599-b952-97e6b333d3f4",
+					"childcol": "e7230533-71ca-42c1-994b-d246d2bc20b1"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"3fedae02-1b42-45d4-8e03-394e1ad59882": {
+			"id": "3fedae02-1b42-45d4-8e03-394e1ad59882",
+			"visible": true,
+			"name": "trabajador_trabajador_aerolinea",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "eb01ec6f-bf6f-4535-bd74-a6665d9a5059",
+			"parent": "929d4969-42ff-411e-8e0c-5f083788751b",
+			"child": "07c55446-2e03-423d-83b5-8732b39b33cc",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "b77bfe95-6659-417d-86c3-2d724045cd49",
+					"parentcol": "bba11560-d7c4-46d2-8410-a3f32466827d",
+					"childcol": "fd4ae6d8-8398-4a52-980f-41ffd5201c8d"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"831b8be3-d656-4660-abb5-4c89e3aebd1d": {
+			"id": "831b8be3-d656-4660-abb5-4c89e3aebd1d",
+			"visible": true,
+			"name": "aerolinea_trabajador_aerolinea",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "57b61c5c-fb89-4eb5-9361-35811fb8dc93",
+			"parent": "af619378-6625-4c34-9228-e24e07341534",
+			"child": "07c55446-2e03-423d-83b5-8732b39b33cc",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "977b77b7-85f9-477d-83f1-aa9ef49f4d26",
+					"parentcol": "369e6169-c281-459f-bf9b-df038c216cd9",
+					"childcol": "12cb76e0-8ddc-491e-a0d2-4db4714fc2e5"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"96e0cdc2-b92a-48a7-9a6a-d208a7bc9f8b": {
+			"id": "96e0cdc2-b92a-48a7-9a6a-d208a7bc9f8b",
+			"visible": true,
+			"name": "trabajador_piloto",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "eb01ec6f-bf6f-4535-bd74-a6665d9a5059",
+			"parent": "929d4969-42ff-411e-8e0c-5f083788751b",
+			"child": "6c3bea6f-acb1-42fe-9836-e451fa78b0b9",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "one",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "7f0c22c3-80d0-4c5d-b5b2-1de8a8e15aa0",
+					"parentcol": "bba11560-d7c4-46d2-8410-a3f32466827d",
+					"childcol": "55b97e49-5309-4ad4-b871-8b310dd910c2"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"e87f81e1-e90f-4f44-b2eb-c2bc66c4bccb": {
+			"id": "e87f81e1-e90f-4f44-b2eb-c2bc66c4bccb",
+			"visible": true,
+			"name": "tripulante_tripulante_vuelo",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "6f2251d9-05a6-404a-aace-9255b080b181",
+			"parent": "c5aadf83-07fc-4ee4-b81b-b5d75ea73b12",
+			"child": "bd723afb-103c-42e6-a145-f0504b69b1fc",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "ae27668b-2ea4-4c20-8e83-17014cb856a4",
+					"parentcol": "e138e822-85d8-470c-b2d5-f568a994c344",
+					"childcol": "5f325414-f0a5-4b84-93f2-83b9cad062a6"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"8c2db2be-a3f7-4ad2-8435-fccc24b00608": {
+			"id": "8c2db2be-a3f7-4ad2-8435-fccc24b00608",
+			"visible": true,
+			"name": "trabajador_tripulante",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "eb01ec6f-bf6f-4535-bd74-a6665d9a5059",
+			"parent": "929d4969-42ff-411e-8e0c-5f083788751b",
+			"child": "c5aadf83-07fc-4ee4-b81b-b5d75ea73b12",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "33e54816-137e-49cf-9088-d2d8a6416f66",
+					"parentcol": "bba11560-d7c4-46d2-8410-a3f32466827d",
+					"childcol": "e138e822-85d8-470c-b2d5-f568a994c344"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		}
+	},
+	"notes": {},
+	"lines": {},
+	"model": {
+		"name": "Vuelos",
+		"id": "53055b20-399e-4d7e-9feb-cba548a39ceb",
+		"activeDiagram": "9d0946f2-15e9-4910-9950-1d3b729e2f7c",
+		"desc": "",
+		"path": "",
+		"type": "PG",
+		"version": 1,
+		"parentTableInFkCols": true,
+		"caseConvention": "under",
+		"replaceSpace": "_",
+		"color": "transparent",
+		"sideSelections": true,
+		"isDirty": false,
+		"storedin": {
+			"major": 4,
+			"minor": 5,
+			"extra": 1
+		},
+		"embeddedInParentsIsDisplayed": true,
+		"schemaContainerIsDisplayed": true,
+		"cardinalityIsDisplayed": true,
+		"estimatedSizeIsDisplayed": true,
+		"stickyParentIsDisplayed": false,
+		"def_coltopk": true,
+		"pg": {
+			"schema": ""
+		},
+		"sqlSettings": {
+			"wrapLines": true,
+			"wrapOffset": 80,
+			"indent": true,
+			"indentationString": "spaces",
+			"indentationSize": 2,
+			"limitItemsOnLine": true,
+			"maxListItemsOnLine": 3,
+			"statementDelimiter": ";",
+			"routineDelimiter": ";",
+			"keywordCase": "lower",
+			"identiferCase": "lower",
+			"includeSchema": "always",
+			"quotation": "if_needed"
+		},
+		"writeFileParam": false,
+		"lastSaved": "Sat May 21 2022 02:47:41 GMT-0400 (Chile Standard Time)"
+	},
+	"otherObjects": {},
+	"diagrams": {
+		"9d0946f2-15e9-4910-9950-1d3b729e2f7c": {
+			"name": "Main Diagram",
+			"description": "",
+			"id": "9d0946f2-15e9-4910-9950-1d3b729e2f7c",
+			"keysgraphics": true,
+			"linegraphics": "detailed",
+			"zoom": 1,
+			"background": "#ffffff",
+			"lineColor": "#111111",
+			"isOpen": true,
+			"main": true,
+			"diagramItems": {
+				"af619378-6625-4c34-9228-e24e07341534": {
+					"referencedItemId": "af619378-6625-4c34-9228-e24e07341534",
+					"x": 464,
+					"y": 555,
+					"gHeight": 81,
+					"gWidth": 207,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				},
+				"929d4969-42ff-411e-8e0c-5f083788751b": {
+					"referencedItemId": "929d4969-42ff-411e-8e0c-5f083788751b",
+					"x": 1231,
+					"y": 165,
+					"gHeight": 99,
+					"gWidth": 226,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				},
+				"ec8a47d9-5c79-4ea1-9031-86bf5bfb2065": {
+					"referencedItemId": "ec8a47d9-5c79-4ea1-9031-86bf5bfb2065",
+					"x": 46,
+					"y": 67,
+					"gHeight": 243,
+					"gWidth": 314,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				},
+				"bd723afb-103c-42e6-a145-f0504b69b1fc": {
+					"referencedItemId": "bd723afb-103c-42e6-a145-f0504b69b1fc",
+					"x": 532,
+					"y": 111,
+					"gHeight": 118,
+					"gWidth": 232,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": true,
+					"autoExpand": true
+				},
+				"f637d5c9-09a8-4907-bb4f-3d37c668cbd9": {
+					"referencedItemId": "f637d5c9-09a8-4907-bb4f-3d37c668cbd9",
+					"x": 463,
+					"y": 684,
+					"gHeight": 135,
+					"gWidth": 214,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				},
+				"63d1cbb5-3fe5-47ed-9070-e6631e14e30f": {
+					"referencedItemId": "63d1cbb5-3fe5-47ed-9070-e6631e14e30f",
+					"x": 836,
+					"y": 699,
+					"gHeight": 81,
+					"gWidth": 207,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				},
+				"5a49e698-c7ef-4c54-be4c-66a6793150f1": {
+					"referencedItemId": "5a49e698-c7ef-4c54-be4c-66a6793150f1",
+					"x": 1542,
+					"y": 936,
+					"gHeight": 117,
+					"gWidth": 213,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": true,
+					"autoExpand": true
+				},
+				"4fe2a5e3-d7d8-4691-97f4-cdae81aec55e": {
+					"referencedItemId": "4fe2a5e3-d7d8-4691-97f4-cdae81aec55e",
+					"x": 1484,
+					"y": 620,
+					"gHeight": 117,
+					"gWidth": 234,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				},
+				"8bacbe65-da3f-4baf-9001-9a40943b9bf2": {
+					"referencedItemId": "8bacbe65-da3f-4baf-9001-9a40943b9bf2",
+					"x": 483,
+					"y": 378,
+					"gHeight": 81,
+					"gWidth": 217,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				},
+				"199e52d5-a8dd-4c10-a8df-01c8941987b2": {
+					"referencedItemId": "199e52d5-a8dd-4c10-a8df-01c8941987b2",
+					"x": 1082,
+					"y": 351,
+					"gHeight": 153,
+					"gWidth": 243,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				},
+				"adb337c8-80f9-4ba3-9d52-7bb5cb3972d3": {
+					"referencedItemId": "adb337c8-80f9-4ba3-9d52-7bb5cb3972d3",
+					"x": 784,
+					"y": 969,
+					"gHeight": 81,
+					"gWidth": 200,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				},
+				"a154b91e-50e7-46d8-ba6c-6c016908b7cc": {
+					"referencedItemId": "a154b91e-50e7-46d8-ba6c-6c016908b7cc",
+					"x": 446,
+					"y": 852,
+					"gHeight": 81,
+					"gWidth": 200,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				},
+				"e57be351-c706-49b5-a379-7042eaa3900d": {
+					"referencedItemId": "e57be351-c706-49b5-a379-7042eaa3900d",
+					"x": 1158,
+					"y": 931,
+					"gHeight": 68,
+					"gWidth": 202,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": true,
+					"autoExpand": true
+				},
+				"086bd3c6-ba68-4c31-b73e-ee9e2d09f17c": {
+					"referencedItemId": "086bd3c6-ba68-4c31-b73e-ee9e2d09f17c",
+					"x": 1200,
+					"y": 746,
+					"gHeight": 63,
+					"gWidth": 207,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				},
+				"6c3bea6f-acb1-42fe-9836-e451fa78b0b9": {
+					"referencedItemId": "6c3bea6f-acb1-42fe-9836-e451fa78b0b9",
+					"x": 1851,
+					"y": 203,
+					"gHeight": 45,
+					"gWidth": 216,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				},
+				"06d9ffdd-bfdc-43ec-b540-55eee454f0e1": {
+					"referencedItemId": "06d9ffdd-bfdc-43ec-b540-55eee454f0e1",
+					"x": 1535,
+					"y": 71,
+					"gHeight": 63,
+					"gWidth": 189,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				},
+				"ea5d3b8b-8644-451b-9211-1d66fa312ea3": {
+					"referencedItemId": "ea5d3b8b-8644-451b-9211-1d66fa312ea3",
+					"x": 967,
+					"y": 43,
+					"gHeight": 99,
+					"gWidth": 198,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				},
+				"c9addb59-c8c4-4dbd-a520-0095cb5c24f2": {
+					"referencedItemId": "c9addb59-c8c4-4dbd-a520-0095cb5c24f2",
+					"x": 451,
+					"y": 1009,
+					"gHeight": 99,
+					"gWidth": 214,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				},
+				"07c55446-2e03-423d-83b5-8732b39b33cc": {
+					"referencedItemId": "07c55446-2e03-423d-83b5-8732b39b33cc",
+					"x": 777,
+					"y": 261,
+					"gHeight": 63,
+					"gWidth": 216,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				},
+				"c5aadf83-07fc-4ee4-b81b-b5d75ea73b12": {
+					"referencedItemId": "c5aadf83-07fc-4ee4-b81b-b5d75ea73b12",
+					"x": 939,
+					"y": 151,
+					"gHeight": 63,
+					"gWidth": 216,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				}
+			},
+			"scroll": {
+				"x": 0,
+				"y": 0
+			},
+			"type": "erd"
+		}
+	},
+	"order": [
+		"af619378-6625-4c34-9228-e24e07341534",
+		"929d4969-42ff-411e-8e0c-5f083788751b",
+		"ec8a47d9-5c79-4ea1-9031-86bf5bfb2065",
+		"bd723afb-103c-42e6-a145-f0504b69b1fc",
+		"f637d5c9-09a8-4907-bb4f-3d37c668cbd9",
+		"63d1cbb5-3fe5-47ed-9070-e6631e14e30f",
+		"5a49e698-c7ef-4c54-be4c-66a6793150f1",
+		"4fe2a5e3-d7d8-4691-97f4-cdae81aec55e",
+		"8bacbe65-da3f-4baf-9001-9a40943b9bf2",
+		"199e52d5-a8dd-4c10-a8df-01c8941987b2",
+		"adb337c8-80f9-4ba3-9d52-7bb5cb3972d3",
+		"a154b91e-50e7-46d8-ba6c-6c016908b7cc",
+		"e57be351-c706-49b5-a379-7042eaa3900d",
+		"086bd3c6-ba68-4c31-b73e-ee9e2d09f17c",
+		"6c3bea6f-acb1-42fe-9836-e451fa78b0b9",
+		"06d9ffdd-bfdc-43ec-b540-55eee454f0e1",
+		"ea5d3b8b-8644-451b-9211-1d66fa312ea3",
+		"c9addb59-c8c4-4dbd-a520-0095cb5c24f2",
+		"07c55446-2e03-423d-83b5-8732b39b33cc",
+		"c5aadf83-07fc-4ee4-b81b-b5d75ea73b12",
+		"d3c44062-cd4f-4a84-90b4-ff1f71615c87",
+		"8a56aed3-1187-4053-886d-e65bdc1aa131",
+		"4d9950a1-6830-405e-8b0c-8d6182117f6b",
+		"a7e09b26-defe-43b7-af3c-30d372cf72f9",
+		"c9209aec-143a-4c44-93bb-0cc5a18bbbff",
+		"272b8131-9913-409e-8002-395bd36f4320",
+		"4b0c54c3-5330-40e1-a41c-e8a34785bb47",
+		"68e2ffb9-89e1-4f0d-bbb5-dcb0332fabbc",
+		"f5719ddb-ca30-437a-983d-eb7a73b4461f",
+		"ea1d0680-3ae2-4b70-b0e4-3f41fdc2ed3c",
+		"c38c27c4-ca0c-4604-b744-c4bd56a7b610",
+		"bd5c3970-d9ab-4b1e-93b8-23c61a60a063",
+		"4423d01b-be16-4f06-bac5-d9c5e5c893d2",
+		"c337c607-0d49-4b5b-8748-d5b4d783cbac",
+		"39afadeb-368a-44e8-9f21-adb0161613ba",
+		"0925cc4e-f2c8-4bb6-899c-1753fa7fe593",
+		"6c78b92a-9edc-415c-a220-f26f6567cbc0",
+		"1de0773c-9f46-443b-9a54-782004316a73",
+		"0ee58526-8bea-47eb-8d55-24a93e02fba6",
+		"65326d90-fe5f-4558-b5bd-0a648a20ffd2",
+		"3fedae02-1b42-45d4-8e03-394e1ad59882",
+		"831b8be3-d656-4660-abb5-4c89e3aebd1d",
+		"96e0cdc2-b92a-48a7-9a6a-d208a7bc9f8b",
+		"e87f81e1-e90f-4f44-b2eb-c2bc66c4bccb",
+		"8c2db2be-a3f7-4ad2-8435-fccc24b00608"
+	]
+}

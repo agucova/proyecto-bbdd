@@ -1,0 +1,7 @@
+#resumen-proyecto > summary {
+    list-style: none;
+}
+
+#resumen-proyecto > summary::-webkit-details-marker {
+    display: none;
+}

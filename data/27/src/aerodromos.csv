@@ -1,0 +1,40 @@
+aerodromo_id,nombre,codigo_ICAO,codigo_IATA,latitud,longitud,nombre_ciudad,nombre_pais
+41,Aeropuerto Internacional de Icheon,PVOW,LMF,159.1,71.9,Seul,Corea del Sur
+21,Aeropuerto Internacional Toronto Pearson,IWJC,HKA,40.2,41.8,Toronto,Canada
+55,Aeropuerto de Roma-Fiumicino,TBJM,SFF,157.2,26.7,Roma,Italia
+25,Aeropuerto Internacional Kingsford Smith,KMPW,HOX,22.5,59.4,Sidney,Australia
+23,Aeropuerto Internacional de Melbourne,JKRA,HNB,19.5,53.9,Melbourne,Australia
+69,Aeropuerto Internacional Ataturk,XOEY,VNN,104.0,154.4,Estambul,Turquia
+43,Aeropuerto Internacional de Carrasco,PYIM,NVI,66.4,148.0,Montevideo,Uruguay
+75,Aeropuerto Big Apple,YHEP,YGY,43.0,118.1,Nueva York,Estados Unidos
+1,Aeropuerto Internacional Arturo Merino Benítez,BLFS,AWR,75.4,106.5,Santiago,Chile
+15,Aeropuerto Internacional de San Francisco,GPRK,DUU,45.1,142.8,San Francisco,Estados Unidos
+77,Aeropuerto Internacional de Australia,ZGUA,ZLQ,27.3,111.1,Sidney,Australia
+29,Aeropuerto de Adolfo Suárez Madrid-Barajas,MBOO,HSJ,54.2,174.5,Madrid,España
+27,Aeropuerto Internacional de El Cairo,KZZS,HRV,103.8,107.6,El Cairo,Egipto
+19,Aeropuerto de París-Charles de Gaulle,HGZT,HCM,147.2,49.6,Paris,Francia
+7,Aeropuerto Internacional de Galeão,EEGZ,BXS,6.8,90.3,Rio de Janeiro,Brasil
+57,Aeropuerto de Milán-Malpensa,TCGF,SPT,70.1,56.3,Milan,Italia
+71,Aeropuerto Internacional de Nueva York,XSAM,WHO,89.8,171.2,Nueva York,Estados Unidos
+67,Aeropuerto de Ibiza,XEWM,VBH,156.8,54.8,Ibiza,España
+13,Aeropuerto Internacional de Miami,GAWW,CPH,96.1,8.4,Miami,Estados Unidos
+39,Aeropuerto Internacional de Haneda,PFXE,LCX,153.8,40.2,Tokio,Japon
+31,Aeropuerto Josep Tarradellas Barcelona-El Prat,MVPW,JIZ,52.7,165.2,Barcelona,España
+17,Aeropuerto de la Ciudad de Londres,GSPA,EPM,152.5,76.9,Londres,Inglaterra
+49,Aeropuerto Internacional El Alto,SGWN,QJM,173.5,5.6,La Paz,Bolivia
+33,Aeropuerto Internacional de Pekín,NBMQ,JTM,133.5,57.9,Beijing,China
+9,Aeropuerto Internacional O'Hare,FCJT,BYB,166.5,51.0,Chicago,Estados Unidos
+73,Aeropuerto Internacional de Copiapo,XSZW,WKT,92.2,129.6,Santiago,Chile
+35,Aeropuerto Internacional Pudong,NZTG,KFE,153.9,115.7,Shangai,China
+45,Aeropuerto de Ámsterdam-Schiphol,RCQR,OHI,37.1,60.9,Amsterdam,Paises Bajos
+63,Aeropuerto Internacional Indira Gandhi,URLQ,UAU,149.9,125.7,Nueva Delhi,India
+47,Aeropuerto Internacional de Cancún,SDSC,PKS,103.3,99.4,Cancun,Mexico
+5,Aeropuerto Internacional de São Paulo-Guarulhos,DZFP,BKT,17.9,177.8,Sao Pablo,Brasil
+51,Aeropuerto Internacional de la Ciudad del Cabo,SIMJ,RFP,47.4,157.1,Ciudad del Cabo,Sudafrica
+53,Aeropuerto Internacional Jorge Chávez,TAZY,RRK,62.2,148.1,Lima,Peru
+65,Aeropuerto Internacional de Maiquetía Simón Bolívar,VBIT,UYL,144.0,165.7,Caracas,Venezuela
+3,Aeropuerto Internacional de Ezeiza,BVWK,BAH,14.7,51.2,Buenos Aires,Argentina
+59,Aeropuerto de Hong Kong,TQQZ,TEF,142.6,4.1,Hong Kong,Hong Kong
+37,Aeropuerto Internacional Ben Gurión,NZTP,KZN,159.3,167.2,Tel Aviv,China
+61,Aeropuerto Internacional Eleftherios Venizelos,UQQX,TQV,72.4,102.6,Atenas,Grecia
+11,Aeropuerto Internacional John F. Kennedy,FOLH,CKR,18.1,123.4,Nueva York,Estados Unidos
