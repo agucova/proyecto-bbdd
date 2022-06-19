@@ -1,7 +1,4 @@
 #!/usr/bin/env bash
-# Bash Strict mode
-set -euo pipefail
-IFS=$'\n\t'
 
 # Start Postgres
 sudo service postgresql start
