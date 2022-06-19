@@ -1,0 +1,31 @@
+name: Deploy to CODD
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deploy site to the CODD server
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: php-actions/composer@v6
+        with:
+          dev: no
+          working_dir: site/
+
+      - name: Deploy
+        uses: easingthemes/ssh-deploy@main
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY_PROD }}
+          ARGS: >-
+            -rltzv
+            --exclude='.git'
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST_PROD }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER_PROD }}
+          SOURCE: site/
+          TARGET: /home/grupo27/Sites
