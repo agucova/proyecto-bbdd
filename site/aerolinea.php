@@ -17,17 +17,19 @@ if (!$user) {
 $query = $pdo27->prepare("SELECT
 *
 from vuelo
-where estado = 'aceptado' and id_aerolinea = :id;");
-$query->bindParam(':id', $user['id']);
+join aerolinea on vuelo.id_aerolinea = aerolinea.id
+where estado = 'aceptado' and aerolinea.codigo = :nombre;");
+$query->bindParam(':nombre', $user['nombre']);
 $query->execute();
 $approved = $query->fetchAll();
 
 $query = $pdo27->prepare("SELECT
 *
 from vuelo
-where estado = 'rechazado' and id_aerolinea = :id;");
+join aerolinea on vuelo.id_aerolinea = aerolinea.id
+where estado = 'rechazado' and aerolinea.codigo = :nombre;");
 
-$query->bindParam(':id', $user['id']);
+$query->bindParam(':nombre', $user['nombre']);
 $query->execute();
 $rejected = $query->fetchAll();
 

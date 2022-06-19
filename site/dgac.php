@@ -1,5 +1,6 @@
 <?php
 require 'vendor/autoload.php';
+require "config/connection.php";
 
 $templates = new League\Plates\Engine("templates/");
 
@@ -13,4 +14,14 @@ if (!$user) {
     exit;
 }
 
-echo $templates->render('inicio', ["user" => $user]);
+$query = $pdo44->prepare("SELECT *
+FROM fpl_propuesta
+WHERE estado='pendiente';");
+
+$query->execute();
+$proposals = $query->fetchAll();
+
+echo $templates->render('dgac', [
+    "admin" => $user,
+    "proposals" => $proposals
+]);

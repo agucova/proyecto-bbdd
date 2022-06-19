@@ -25,7 +25,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // If the user is in the database, set the session
         $_SESSION['user'] = $user;
-        header('Location: index.php');
+        if ($user['tipo'] == 'admin_dgac') {
+            header("Location: dgac.php");
+        } elseif ($user['tipo'] == 'compañia_aerea') {
+            header("Location: aerolinea.php");
+        }
+        elseif ($user['tipo'] == 'pasajero') {
+            header("Location: pasajero.php");
+        }
+        else {
+            header("Location: index.php");
+        }
     } else {
         // If the user is not in the database, redirect to the login page
         echo $templates->render('login', ["error" => "Usuario o contraseña incorrectos"]);
