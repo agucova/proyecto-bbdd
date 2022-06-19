@@ -8,6 +8,10 @@ FROM mcr.microsoft.com/vscode/devcontainers/php:0-${VARIANT}
 ARG NODE_VERSION="none"
 RUN if [ "${NODE_VERSION}" != "none" ]; then su vscode -c "umask 0002 && . /usr/local/share/nvm/nvm.sh && nvm install ${NODE_VERSION} 2>&1"; fi
 
+# Install micro
+RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
+    && apt-get -y install --no-install-recommends micro
+
 # Install PostgreSQL
 # Add PostgreSQL GPG key
 RUN wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
@@ -19,9 +23,9 @@ RUN sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends postgresql-14 postgresql-client-14 postgresql-contrib-14
 
-# Install micro
+# Install PostgreSQL PDO driver
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get -y install --no-install-recommends micro
+    && apt-get -y install --no-install-recommends libpq-dev && docker-php-ext-install pgsql pdo pdo_pgsql
 
 # Run the rest of the commands as the ``postgres`` user created by the ``postgres-14`` package when it was ``apt-get installed``
 USER postgres
