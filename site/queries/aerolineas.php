@@ -2,7 +2,7 @@
 require __DIR__ . '/../vendor/autoload.php';
 require __DIR__ . "/../config/connection.php";
 
-$query = $pdo->query("SELECT
+$query = $pdo27->query("SELECT
                     id,
                     nombre
                     from aerolinea;");

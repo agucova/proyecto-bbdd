@@ -16,7 +16,7 @@
     <img src="https://imgs.xkcd.com/comics/data_pipeline.png" alt="Data Pipeline">
 
     <p></p>
-    <button onclick="window.location.href='/~grupo27/static/notebook.html'">👉 Ver notebook</button>
+    <button onclick="window.location.href='static/notebook.html'">👉 Ver notebook</button>
     <p></p>
 
     <p>

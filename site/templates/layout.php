@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css">
 
     <!-- Add style -->
-    <link rel="stylesheet" href="/~grupo27/static/style.css">
+    <link rel="stylesheet" href="static/style.css">
 
 </head>
 

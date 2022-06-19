@@ -55,7 +55,7 @@ function cleanPendientes(data) {
 
 
 function consultaVuelosPendientes(event) {
-    const url = '/~grupo27/queries/vuelos-pendientes.php';
+    const url = 'queries/vuelos-pendientes.php';
     fetch(url)
         .then(response => response.json())
         .then(data => {
@@ -88,7 +88,7 @@ function consultaVuelosAceptados(event) {
     console.debug(`id_aerolinea: ${id_aerolinea}`);
     const icao = document.getElementById('icao').value;
 
-    const url = '/~grupo27/queries/vuelos-aceptados.php';
+    const url = 'queries/vuelos-aceptados.php';
     // This time we need to POST the ICAO code and id_aerolinea to the PHP Server
     fetch(url, {
         method: 'POST',
@@ -128,7 +128,7 @@ function consultaTickets(event) {
     // Get reservation code
     const codigo_reserva = document.getElementById('codigo-reserva').value;
 
-    const url = '/~grupo27/queries/tickets.php';
+    const url = 'queries/tickets.php';
     // This time we need to POST the reservation code to the PHP Server
     fetch(url, {
         method: 'POST',
@@ -156,7 +156,7 @@ function cleanClientesFrecuentes (data) {
 }
 
 function consultaClientesFrecuentes() {
-    const url = '/~grupo27/queries/clientes-frecuentes.php';
+    const url = 'queries/clientes-frecuentes.php';
     fetch(url)
         .then(response => response.json())
         .then(data => {
@@ -182,7 +182,7 @@ function consultaResumenVuelos(event) {
     // Get airline
     const nombre_aerolinea = document.getElementById('nombre-aerolinea').value;
 
-    const url = '/~grupo27/queries/resumen-vuelos.php';
+    const url = 'queries/resumen-vuelos.php';
 
     fetch(url, {
         method: 'POST',
@@ -212,7 +212,7 @@ function cleanAerolineaEstrella(data) {
 }
 
 function consultaAerolineaEstrella() {
-    const url = '/~grupo27/queries/aerolinea-estrella.php';
+    const url = 'queries/aerolinea-estrella.php';
     fetch(url)
         .then(response => response.json())
         .then(data => {
@@ -222,7 +222,7 @@ function consultaAerolineaEstrella() {
 
 // Load select data
 function populateAirlines() {
-    const url = '/~grupo27/queries/aerolineas.php';
+    const url = 'queries/aerolineas.php';
     fetch(url)
         .then(response => response.json())
         .then(data => {

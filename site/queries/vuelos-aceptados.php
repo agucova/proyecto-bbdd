@@ -12,7 +12,7 @@ if (!isset($arguments["icao"]) || !isset($arguments["id_aerolinea"])) {
 $icao = $arguments['icao'];
 $id_aerolinea = $arguments['id_aerolinea'];
 
-$query = $pdo->prepare(
+$query = $pdo27->prepare(
   "SELECT
     aerodromo.icao,
     vuelo.codigo,
