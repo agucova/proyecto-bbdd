@@ -11,7 +11,14 @@
     <div><b>Iniciado sesión como:</b></div>
     <div class="reserver-name">👤 <?= $passenger->nombre ?></div>
     <div class="reserver-passport">🛂 <?= $passenger->pasaporte ?></div>
+    <br/>
+    <!-- Search for new flights button -->    
+    <button class="reserver-search">
+        <a href="/buscar_vuelo.php">🔎 Buscar nuevo vuelo</a>
+    </button>
 </div>
+
+
 
 <!-- List of reservations in $reservations -->
 <?php foreach ($reservations as $reservation) : ?>
