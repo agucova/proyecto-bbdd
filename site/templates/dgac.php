@@ -9,7 +9,29 @@
 <h1>Panel de Control Administrador DGAC</h1>
 
 <h2>Propuestas de vuelo pendientes</h2>
-<table>
+
+<!-- Inputs para filtrar por fecha -->
+<details>
+    <summary>Filtrar por fecha</summary>
+    <form id="filter-dates">
+        <label for="start_date">Fecha inicio:</label>
+        <input type="date" name="fecha_inicio" id="fecha_inicio">
+        <label for="end_date">Fecha fin:</label>
+        <input type="date" name="fecha_fin" id="fecha_fin">
+        <input type="submit" value="Filtrar">
+    </form>
+</details>
+
+<style>
+#filter-dates {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+</style>
+
+<table id="requests-table">
     <thead>
         <tr>
             <th>ID</th>
@@ -57,3 +79,47 @@
         <?php endforeach ?>
     </tbody>
 </table>
+
+<script>
+    // Capture form submit event
+    document.getElementById('filter-dates').addEventListener('submit', function(event) {
+        // Stop form from submitting
+        event.preventDefault();
+
+        // Get form data
+        let formData = new FormData(event.target);
+
+        // Get start and end date
+        let startDate = formData.get('fecha_inicio');
+        let endDate = formData.get('fecha_fin');
+
+        // Parse dates
+        startDate = new Date(startDate);
+        endDate = new Date(endDate);
+
+        // Filter table by whether the flight operates between the start and end date
+        let table = document.getElementById('requests-table');
+        let rows = table.getElementsByTagName('tr');
+        for (let i = 1; i < rows.length; i++) {
+            // Skip first row (header)
+            if (i == 0) {
+                continue;
+            }
+
+            let row = rows[i];
+
+            // Get departure and arrival date
+            let departureDate = new Date(row.getElementsByTagName('td')[3].innerHTML);
+            let arrivalDate = new Date(row.getElementsByTagName('td')[4].innerHTML);
+
+            // Check if flight operates between start and end date
+            if (departureDate <= endDate && arrivalDate >= startDate) {
+                // Overlaps
+                row.style.display = '';
+            } else {
+                // Doesn't overlap
+                row.style.display = 'none';
+            }
+        }
+    });
+</script>
