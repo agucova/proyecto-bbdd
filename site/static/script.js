@@ -242,13 +242,13 @@ function populateAirlines() {
 }
 
 // Load select data
-populateAirlines();
+// populateAirlines();
 
 // Wire up button with queries
-document.getElementById('boton-vuelos-pendientes').addEventListener('click', consultaVuelosPendientes);
-document.getElementById('boton-clientes-frecuentes').addEventListener('click', consultaClientesFrecuentes);
-document.getElementById('boton-aerolinea-estrella').addEventListener('click', consultaAerolineaEstrella);
-// On form submit
-document.getElementById('form-vuelos-aceptados').addEventListener('submit', consultaVuelosAceptados);
-document.getElementById('form-tickets').addEventListener('submit', consultaTickets);
-document.getElementById('form-resumen-vuelos').addEventListener('submit', consultaResumenVuelos);
+// document.getElementById('boton-vuelos-pendientes').addEventListener('click', consultaVuelosPendientes);
+// document.getElementById('boton-clientes-frecuentes').addEventListener('click', consultaClientesFrecuentes);
+// document.getElementById('boton-aerolinea-estrella').addEventListener('click', consultaAerolineaEstrella);
+// // On form submit
+// document.getElementById('form-vuelos-aceptados').addEventListener('submit', consultaVuelosAceptados);
+// document.getElementById('form-tickets').addEventListener('submit', consultaTickets);
+// document.getElementById('form-resumen-vuelos').addEventListener('submit', consultaResumenVuelos);
