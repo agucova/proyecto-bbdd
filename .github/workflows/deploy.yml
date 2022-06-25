@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    name: Deploy site to the CODD server
+    name: Deploy site and migrations
     runs-on: ubuntu-latest
 
     steps:
@@ -18,7 +18,7 @@ jobs:
           dev: no
           working_dir: site/
 
-      - name: Deploy
+      - name: Deploy site
         uses: easingthemes/ssh-deploy@main
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY_PROD }}
@@ -29,3 +29,27 @@ jobs:
           REMOTE_USER: ${{ secrets.REMOTE_USER_PROD }}
           SOURCE: site/
           TARGET: /home/grupo27/Sites
+
+      - name: Transfer database scripts
+        uses: easingthemes/ssh-deploy@main
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY_PROD }}
+          ARGS: >-
+            -rltzv
+            --exclude='.git'
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST_PROD }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER_PROD }}
+          SOURCE: functions/
+          TARGET: /home/grupo27/migrations
+
+      - name: Run migrations to database 27
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.REMOTE_HOST_PROD }}
+          username: ${{ secrets.REMOTE_USER_PROD }}
+          key: ${{ secrets.SSH_PRIVATE_KEY_PROD }}
+          script: |
+            export PGPASSWORD=${{ secrets.GRUPO27_PASSWORD }}
+            psql -h localhost -U grupo27 -d grupo27e3 -f migrations/import_users.sql
+            psql -h localhost -U grupo27 -d grupo27e3 -f migrations/update_proposal.sql
+            psql -h localhost -U grupo27 -d grupo27e3 -f migrations/patch_serial.sql

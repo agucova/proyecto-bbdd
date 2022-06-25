@@ -8,7 +8,8 @@ psql -d grupo44e3 -f dumps/grupo44.sql
 # Load stored functions
 psql -d grupo27e3 -f functions/import_users.sql
 psql -d grupo27e3 -f functions/update_proposal.sql
-
+# Patch broken serial generation of IDs
+psql -d grupo27e3 -f functions/patch_serial.sql
 
 # Composer install
 cd site/ && composer install && cd ../
