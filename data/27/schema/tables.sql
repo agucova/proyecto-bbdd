@@ -29,7 +29,7 @@ drop table if exists nombre_modelo;
 
 /* Table 'aerolinea' */
 create table aerolinea(
-  id serial not null,
+  id identity not null,
   codigo char(3) not null,
   nombre varchar(80) not null,
   primary key(id),
@@ -38,7 +38,7 @@ create table aerolinea(
 
 /* Table 'trabajador' */
 create table trabajador(
-  id serial not null,
+  id identity not null,
   pasaporte varchar(40) not null,
   nombre varchar(120) not null,
   fecha_nacimiento date not null,
@@ -48,7 +48,7 @@ create table trabajador(
 
 /* Table 'vuelo' */
 create table vuelo(
-  id serial not null,
+  id identity not null,
   id_aerolinea integer not null,
   id_origen integer not null,
   id_destino integer not null,
@@ -73,7 +73,7 @@ create table trabajador_vuelo(
 
 /* Table 'aerodromo' */
 create table aerodromo(
-  id serial not null,
+  id identity not null,
   icao char(4) not null,
   iata char(3) not null,
   id_ciudad integer not null,
@@ -132,7 +132,7 @@ create table costo(
 
 /* Table 'avion' */
 create table avion(
-  id serial not null,
+  id identity not null,
   codigo char(7) not null,
   id_modelo integer not null,
   primary key(id),
@@ -140,11 +140,11 @@ create table avion(
 );
 
 /* Table 'ruta' */
-create table ruta(id serial not null, nombre char(6) not null, primary key(id));
+create table ruta(id identity not null, nombre char(6) not null, primary key(id));
 
 /* Table 'pais' */
 create table pais
-  (id serial not null, nombre varchar(80) not null, primary key(id));
+  (id identity not null, nombre varchar(80) not null, primary key(id));
 
 /* Table 'licencia' */
 create table licencia
