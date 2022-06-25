@@ -12,10 +12,8 @@
     <img src="https://imgs.xkcd.com/comics/data_pipeline.png" alt="Data Pipeline">
 
     <p>
-        Para el <b>back-end</b> utilizamos PHP + PDO, actuando a modo de API de consultas.
-    </p>
-    <p>
-        Para el <b>front-end</b> utilizamos una página estática generada por templates de <a href=" https://platesphp.com/">Plates</a>, estilos desclasados con <a href="https://watercss.kognise.dev/">Water.css</a> y JavaScript moderno para consumir la API.
+        <br/>
+        Para el <b>front-end</b> utilizamos una página estática generada por templates de <a href=" https://platesphp.com/">Plates</a> y estilos desclasados con <a href="https://watercss.kognise.dev/">Water.css</a>.
     </p>
 
 </details>
