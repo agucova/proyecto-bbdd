@@ -39,9 +39,8 @@ jobs:
             --exclude='.git'
           REMOTE_HOST: ${{ secrets.REMOTE_HOST_PROD }}
           REMOTE_USER: ${{ secrets.REMOTE_USER_PROD }}
-          SOURCE: functions/
-          TARGET: /home/grupo27/migrations
-
+          TARGET: /home/grupo27/repo
+      
       - name: Run migrations to database 27
         uses: appleboy/ssh-action@master
         with:
@@ -50,6 +49,19 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY_PROD }}
           script: |
             export PGPASSWORD=${{ secrets.GRUPO27_PASSWORD }}
+            psql -h localhost -U grupo27 -d grupo27e3 -f migrations/generate_reservation.sql
+            psql -h localhost -U grupo27 -d grupo27e3 -f migrations/generate_ticket.sql
+            psql -h localhost -U grupo27 -d grupo27e3 -f migrations/has_schedule_conflict.sql
+            psql -h localhost -U grupo27 -d grupo27e3 -f migrations/is_passport_valid.sql
             psql -h localhost -U grupo27 -d grupo27e3 -f migrations/import_users.sql
-            psql -h localhost -U grupo27 -d grupo27e3 -f migrations/update_proposal.sql
             psql -h localhost -U grupo27 -d grupo27e3 -f migrations/patch_serial.sql
+
+      - name: Update E3 folder.
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.REMOTE_HOST_PROD }}
+          username: ${{ secrets.REMOTE_USER_PROD }}
+          key: ${{ secrets.SSH_PRIVATE_KEY_PROD }}
+          script: |
+            cp /home/grupo27/repo/README.md /home/grupo27/Entrega3
+            cp -r /home/grupo27/repo/functions /home/grupo27/Entrega3/
