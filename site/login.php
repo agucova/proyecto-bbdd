@@ -25,6 +25,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // If the user is in the database, set the session
         $_SESSION['user'] = $user;
+        session_regenerate_id();
+
         if ($user['tipo'] == 'admin_dgac') {
             header("Location: dgac.php");
         } elseif ($user['tipo'] == 'compañia_aerea') {
