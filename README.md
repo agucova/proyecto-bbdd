@@ -129,9 +129,9 @@ Para logearse en la aplicación debes usar uno de los usuarios y contraseñas ex
 
 - **Admin DGAC**: Creamos (si es que no existe) un usuario llamado DGAC con la contraseña admin y de tipo admin_dgac.
 
-- **Compañía aérea**: Para cada compañía aérea, creamos un usuario de tipo compañia_aerea, de nombre su sigla y asignamos una contraseña de strings random de largo 10 con la función random_string que creamos.
+- **Compañía aérea**: Para cada compañía aérea, creamos un usuario de tipo compañia_aerea, de nombre su código y asignamos una contraseña de strings random de largo 10 con la función random_string que creamos.
 
-- **Pasajero**: Para cada pasajero creamos un usuario de tipo pasajero, con username su número de pasaporte, y una clave que compone su nombre, número de pasaporte y un string random de largo 5 utilizando la función random_string nuevamente.
+- **Pasajero**: Para cada pasajero creamos un usuario de tipo pasajero, con username su pasaporte, y una clave que se compone de su nombre, número de pasaporte y un string random de largo 5 utilizando la función random_string nuevamente, todo separado por guiones bajos.
 
  Todo el código referente a estos procedimientos se encuentra en el archivo ```importar_usuarios.php```
 
