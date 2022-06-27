@@ -35,13 +35,17 @@ $$ language plpgsql;
 
 
 create or replace function import_users()
-returns void AS $$
+-- Returns the number of users imported
+returns integer as $$
 declare
     fila record;
+    new_users integer := 0;
 begin
+
 -- Crear Usuario DGAC
 if (select id from usuario WHERE nombre = 'DGAC' limit 1) is NULL then
     insert into usuario(nombre, clave, tipo) values('DGAC', 'admin', 'admin_dgac');
+    new_users := new_users + 1;
 end if;
 
 -- Crear usuarios de las compañías aéreas
@@ -49,6 +53,7 @@ for fila in (select * from aerolinea)
 loop
     if (select id from usuario WHERE nombre = fila.codigo limit 1) is NULL then
         insert into usuario(nombre, clave, tipo) values(fila.codigo, random_string(10), 'compañia_aerea');
+        new_users := new_users + 1;
     end if;
 end loop;
 
@@ -57,8 +62,11 @@ for fila in (select * from pasajero)
 loop
     if (select id from usuario WHERE nombre = fila.pasaporte limit 1) is NULL then
         insert into usuario(nombre, clave, tipo) values(fila.pasaporte, random_passenger_password(fila.nombre, fila.pasaporte), 'pasajero');
+        new_users := new_users + 1;
     end if;
 end loop;
+
+return new_users;
 
 end;
 $$ language plpgsql;

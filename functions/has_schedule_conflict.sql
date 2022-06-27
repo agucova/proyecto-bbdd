@@ -1,21 +1,27 @@
 create or replace function has_schedule_conflict(
-    id_pasajero integer,
-    fecha_salida timestamptz(6),
-    fecha_llegada timestamptz(6)
+    pasaporte_pasajero varchar(40),
+    id_vuelo integer
 ) returns boolean as $$
 
 declare
-    ticket RECORD;
-    vuelo RECORD;
+    fecha_salida_vuelo timestamptz(6);
+    fecha_llegada_vuelo timestamptz(6);
 begin
-    for ticket IN (SELECT * FROM ticket WHERE id_pasajero = id_pasajero)
-    LOOP
-        vuelo := (SELECT * FROM vuelo WHERE id = fila.id_vuelo)
-        IF (vuelo.fecha_salida <= fecha_llegada && vuelo.fecha_llegada >= fecha_salida) THEN
-            return TRUE;
-        END IF;
-    END LOOP;
-    return FALSE;
+    fecha_salida_vuelo := (SELECT fecha_salida FROM vuelo WHERE id = id_vuelo);
+    fecha_llegada_vuelo := (SELECT fecha_llegada FROM vuelo WHERE id = id_vuelo);
 
+    
+    IF EXISTS (SELECT *
+                FROM ticket
+                    JOIN pasajero ON ticket.id_pasajero = pasajero.id
+                    JOIN vuelo ON ticket.id_vuelo = vuelo.id
+                WHERE pasajero.pasaporte = pasaporte_pasajero
+                    AND (vuelo.fecha_salida <= fecha_salida_vuelo)
+                    AND (vuelo.fecha_llegada >= fecha_llegada_vuelo)
+                LIMIT 1) THEN
+        return TRUE;
+    ELSE
+        return FALSE;
+    END IF;
 end;
-$$ language plpgsql
+$$ language plpgsql;
