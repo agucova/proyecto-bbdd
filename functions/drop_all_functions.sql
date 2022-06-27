@@ -6,4 +6,5 @@ BEGIN;
     DROP FUNCTION IF EXISTS generate_ticket(integer, integer, integer);
     -- new signature
     DROP FUNCTION IF EXISTS generate_ticket(integer, integer, character varying);
+    DROP FUNCTION IF EXISTS import_users;
 END;

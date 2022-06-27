@@ -15,7 +15,8 @@ if(!$query) {
     ]);
 }
 
-// Close all sessions
+// Log out user
+session_start();
 session_destroy();
 
 // If no users were imported return to index with a message in the URI
