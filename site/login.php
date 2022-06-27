@@ -14,10 +14,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = $_POST['password'];
 
     // Check if the user is in the database with bound parameters
-    $query = $pdo27 -> prepare("SELECT * FROM usuario WHERE nombre = :username AND clave = :password");
-    $query -> bindParam(':username', $username);
-    $query -> bindParam(':password', $password);
-    $query -> execute();
+    $query = $pdo27->prepare("SELECT * FROM usuario WHERE nombre = :username AND clave = :password");
+    $query->bindParam(':username', $username);
+    $query->bindParam(':password', $password);
+    $query->execute();
     $user = $query->fetch();
     if ($user) {
         // Session start
@@ -29,11 +29,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             header("Location: dgac.php");
         } elseif ($user['tipo'] == 'compañia_aerea') {
             header("Location: aerolinea.php");
-        }
-        elseif ($user['tipo'] == 'pasajero') {
+        } elseif ($user['tipo'] == 'pasajero') {
             header("Location: pasajero.php");
-        }
-        else {
+        } else {
             header("Location: index.php");
         }
     } else {
@@ -41,6 +39,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo $templates->render('login', ["error" => "Usuario o contraseña incorrectos"]);
     }
 } else {
-    // Process 
-    echo $templates->render('login', ["error" => ""]);
+    session_start();
+    // Check if user is logged in
+    if (isset($_SESSION['user'])) {
+        // If the user is logged in, redirect to the home page
+        header("Location: index.php");
+    } else {
+        // If the user is not logged in, show the login page
+        echo $templates->render('login', ["error" => ""]);
+    }
 };

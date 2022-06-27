@@ -14,7 +14,7 @@
     text-align: center;
 }
 
-.reserver-info {
+.user-info {
     text-align: center;
     /* make it a card */
     border: 1px solid #ccc;
@@ -93,18 +93,7 @@
     margin-bottom: 5px;
 }
 
-.logout-container {
-    /* Align center */
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-}
 
-.logout-button {
-    width: 300px;
-}
 
 .button-centered {
     margin-left: auto;

@@ -16,24 +16,19 @@ if (!$user) {
 
 // If user is not a passenger, redirect to home
 if ($user['tipo'] != 'pasajero') {
-    header('Location: index.php');
+    echo $templates->render('error', [
+        'error' => 'Debes ser un pasajero para ver reservas.'
+    ]);
     exit;
 }
 
-// Get flight id and reservation id from _GET
-$flight_id = $_GET['flight-id'];
-$reservation_id = $_GET['reservation-id'];
+// Get reservation id from _GET, null if not set
+$reservation_id =  isset($_GET['reservation-id']) ? $_GET['reservation-id'] : null;
 
-// Get flight and reservation from database
-$query_flight = $pdo27->prepare('SELECT * FROM vuelo WHERE id = :flight_id');
-$query_flight->execute([':flight_id' => $flight_id]);
-$flight = $query_flight->fetchObject();
-
-// If flight not found show error
-if (!$flight) {
-    http_response_code(404);
+// If reservation id is not set, show an error
+if (!$reservation_id) {
     echo $templates->render('error', [
-        'error' => 'Vuelo no encontrado.'
+        'error' => 'No se entregó un ID de reserva.'
     ]);
     exit;
 }
@@ -97,4 +92,4 @@ if (!$tickets) {
     exit;
 }
 
-echo $templates->render('reserva_creada', ["flight" => $flight, "reservation" => $reservation, "tickets" => $tickets]);
+echo $templates->render('reserva_creada', ["reservation" => $reservation, "tickets" => $tickets, "new_reservation" => true]);

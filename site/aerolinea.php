@@ -15,13 +15,13 @@ if (!$user) {
 }
 
 // If user is not an airline, redirect to home
-if ($user['tipo'] != 'compañia_aerolinea') {
+if ($user['tipo'] != 'compañia_aerea') {
     header('Location: index.php');
     exit;
 }
 
 $query = $pdo27->prepare("SELECT
-*
+vuelo.codigo AS codigo, fecha_salida, fecha_llegada, velocidad, altitud
 from vuelo
 join aerolinea on vuelo.id_aerolinea = aerolinea.id
 where estado = 'aceptado' and aerolinea.codigo = :nombre;");
@@ -30,7 +30,7 @@ $query->execute();
 $approved = $query->fetchAll();
 
 $query = $pdo27->prepare("SELECT
-*
+vuelo.codigo AS codigo, fecha_salida, fecha_llegada, velocidad, altitud
 from vuelo
 join aerolinea on vuelo.id_aerolinea = aerolinea.id
 where estado = 'rechazado' and aerolinea.codigo = :nombre;");

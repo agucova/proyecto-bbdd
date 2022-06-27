@@ -24,11 +24,14 @@
     <input type="submit" value="🔍 Buscar vuelos">
 </form>
 
-<!-- If $results is not null, display the results in a table -->
 <?php if (!is_null($results)) : ?>
     <br />
     <hr />
     <h2>Resultados</h2>
+<?php endif ?>
+
+<!-- If $results is not null, display the results in a table -->
+<?php if (!is_null($results) && !empty($results)) : ?>
     <table>
         <thead>
             <tr>

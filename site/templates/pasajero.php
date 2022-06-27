@@ -7,17 +7,19 @@
 </style>
 
 <h1 class="reserves-title">Reservas</h1>
-<div class="reserver-info">
+<div class="user-info">
     <div><b>Iniciado sesión como:</b></div>
-    <div class="reserver-name">👤 <?= $passenger->nombre ?></div>
+    <div class="user-name">👤 <?= $passenger->nombre ?></div>
     <div class="reserver-passport">🛂 <?= $passenger->pasaporte ?></div>
     <br />
     <!-- Search for new flights button -->
-    <form>
-        <button class="button-centered" type="submit" action="/buscar_vuelo.php" method="get" target="_blank">
-            🔎 Buscar nuevo vuelo
-        </button>
-    </form>
+    <button class="search-button" onclick="window.location.href='buscar_vuelo.php'">
+        🔎 Buscar nuevo vuelo
+    </button>
+    <button class="logout-button" type="button" onclick="window.location.href = 'logout.php'">🔐 Cerrar Sesión</button>
+    <button class="button-centered" onclick="window.location.href='index.php'">
+        🏠 Volver al inicio
+    </button>
 </div>
 
 <!-- List of reservations in $reservations -->
@@ -73,10 +75,6 @@
 <?php endforeach ?>
 <br />
 <hr />
-
-<div class="logout-container">
-    <button class="logout-button" type="button" onclick="window.location.href = 'logout.php'">Cerrar Sesión</button>
-</div>
 
 <script>
     // Scan for <time> tags and populate them with localized datetime strings

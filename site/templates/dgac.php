@@ -8,6 +8,16 @@
 
 <h1>Panel de Control Administrador DGAC</h1>
 
+<div class="user-info">
+    <div><b>Iniciado sesión como:</b></div>
+    <div class="user-name">👤 <?= $admin["nombre"] ?></div>
+    <br />
+    <button class="logout-button" type="button" onclick="window.location.href = 'logout.php'">🔐 Cerrar Sesión</button>
+    <button class="button-centered" onclick="window.location.href='index.php'">
+        🏠 Volver al inicio
+    </button>
+</div>
+
 <h2>Propuestas de vuelo pendientes</h2>
 
 <!-- Inputs para filtrar por fecha -->
@@ -23,12 +33,12 @@
 </details>
 
 <style>
-#filter-dates {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
+    #filter-dates {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
 </style>
 
 <table id="requests-table">
@@ -39,11 +49,11 @@
             <th>Código</th>
             <th>Fecha Salida</th>
             <th>Fecha Llegada</th>
-            <th>Aerodromo Salida</th>
-            <th>Aerodromo Llegada</th>
+            <th>Aerodromo Salida (ID)</th>
+            <th>Aerodromo Llegada (ID)</th>
             <th>Fecha Envío Propuesta</th>
-            <th>Compañía Aérea</th>
-            <th>Aeronave</th>
+            <th>Compañía Aérea (ID)</th>
+            <th>Aeronave (ID)</th>
             <th>Aprobar</th>
             <th>Rechazar</th>
         </tr>
