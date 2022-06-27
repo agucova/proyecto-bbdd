@@ -27,6 +27,24 @@
     <!-- Cloudflare Web Analytics -->
     <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3fe8f25934704e8490eee397a5b5a5f9"}'></script>
     <!-- End Cloudflare Web Analytics -->
+    <script>
+        // Scan for <time> tags and populate them with localized datetime strings
+        document.querySelectorAll('time').forEach(function(time_element) {
+            let datetime = new Date(time_element.getAttribute('datetime'));
+
+            let timezone = datetime.getTimezoneOffset() / 60;
+            if (timezone < 0) {
+                timezone = '+' + timezone;
+            } else {
+                timezone = '-' + timezone;
+            }
+
+            time_element.innerHTML = "⏰ " + datetime.toLocaleString({
+                hour12: false
+            }) + " GMT" + timezone;
+        });
+    </script>
+
 </body>
 
 </html>

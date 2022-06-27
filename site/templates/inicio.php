@@ -29,11 +29,11 @@
 <?php else : ?>
     <h3>Bienvenido <?= $user['nombre'] ?>! 👋</h3>
     <?php if ($user["tipo"] == "admin_dgac") : ?>
-        <button type="button" onclick="window.location.href = '/dgac.php'">🔒 Ir al panel de administración</button>
+        <button type="button" onclick="window.location.href = 'dgac.php'">🔒 Ir al panel de administración</button>
     <?php elseif ($user["tipo"] == "compañia_aerea") : ?>
-        <button type="button" onclick="window.location.href = '/aerolinea.php'">✈️ Ir a ver mis vuelos</button>
+        <button type="button" onclick="window.location.href = 'aerolinea.php'">✈️ Ir a ver mis vuelos</button>
     <?php elseif ($user["tipo"] == "pasajero") : ?>
-        <button type="button" onclick="window.location.href = '/pasajero.php'">📄 Ir a ver mis reservas</button>
+        <button type="button" onclick="window.location.href = 'pasajero.php'">📄 Ir a ver mis reservas</button>
     <?php endif ?>
 
     <button type="button" onclick="window.location.href = 'logout.php'">🔐 Cerrar Sesión</button>

@@ -23,7 +23,7 @@ if ($user['tipo'] != 'pasajero') {
 }
 
 // Get reservation id from _GET, null if not set
-$reservation_id =  isset($_GET['reservation-id']) ? $_GET['reservation-id'] : null;
+$reservation_id =  isset($_GET['id']) ? $_GET['id'] : null;
 
 // If reservation id is not set, show an error
 if (!$reservation_id) {
@@ -92,4 +92,12 @@ if (!$tickets) {
     exit;
 }
 
-echo $templates->render('reserva_creada', ["reservation" => $reservation, "tickets" => $tickets, "new_reservation" => true]);
+// Check if the reservation is new by the &new GET parameter
+$new = isset($_GET['new']) ? $_GET['new'] : null;
+if ($new == 'true') {
+    $new = true;
+} else {
+    $new = false;
+}
+
+echo $templates->render('reserva', ["reservation" => $reservation, "tickets" => $tickets, "new_reservation" => $new]);

@@ -50,7 +50,8 @@ foreach ($reservations as $key => $reservation) {
           aerodromo_destino.nombre as aeropuerto_destino,
           pais_destino.nombre as pais_destino,
           vuelo.fecha_salida as fecha_salida,
-          vuelo.fecha_llegada as fecha_llegada
+          vuelo.fecha_llegada as fecha_llegada,
+          vuelo.codigo as codigo_vuelo
         from
           ticket
           join vuelo on ticket.id_vuelo = vuelo.id

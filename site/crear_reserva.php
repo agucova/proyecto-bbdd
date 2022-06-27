@@ -137,5 +137,5 @@ elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Redirect to the reservation page
-    header('Location: reserva_creada.php?reservation-id=' . $reservation_id);
+    header('Location: reserva.php?id=' . $reservation_id . '&new=true');
 }

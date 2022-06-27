@@ -10,7 +10,7 @@
     </p>
 <?php endif; ?>
 <!-- Search flights by origin city, destination city and departure date -->
-<form action="/buscar_vuelo.php" method="post">
+<form action="buscar_vuelo.php" method="post">
     <label for="origin-city">Ciudad de origen:</label>
     <select name="origin-city" id="origin-city">
         <option value="<?= $origin_city ?>">Seleccione una ciudad</option>
@@ -91,7 +91,7 @@
 
     // Load origin and destination cities from API
     function loadCities() {
-        fetch('/queries/ciudades.php')
+        fetch('queries/ciudades.php')
             .then(response => response.json())
             .then(cities => {
                 let origin_cities = cleanDataFromPHP(cities['origin_cities']);

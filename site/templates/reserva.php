@@ -1,6 +1,11 @@
 <?php $this->layout('layout', ['title' => 'Entrega 3 BBDD - Reserva exitosa', 'description' => "Este es un proyecto de BBDD (IIC2413) que demuestra la capacidad de procesar datos, cargarlos a una base de datos, generar consultas complejas y mostrarlas en una página web."]) ?>
+<style>
+    body{
+        max-width: 1400px;
+    }
+</style>
 
-<h1>Sobre tu reserva</h1>
+<h1 class="reserves-title">Sobre tu reserva</h1>
 
 <?php if ($new_reservation) : ?>
     <p>✅ Tu reserva fue creada exitosamente con el código <?= $reservation->codigo ?>.</p>
@@ -54,25 +59,6 @@
         </div>
     <?php endforeach ?>
 </div>
-
-
-<script>
-    // Scan for <time> tags and populate them with localized datetime strings
-    document.querySelectorAll('time').forEach(function(time_element) {
-        let datetime = new Date(time_element.getAttribute('datetime'));
-
-        let timezone = datetime.getTimezoneOffset() / 60;
-        if (timezone < 0) {
-            timezone = '+' + timezone;
-        } else {
-            timezone = '-' + timezone;
-        }
-
-        time_element.innerHTML = "⏰ " + datetime.toLocaleString({
-            hour12: false
-        }) + " GMT" + timezone;
-    });
-</script>
 
 <button class="button-centered" onclick="window.location.href='pasajero.php'">
     Volver a mis reservas

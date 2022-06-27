@@ -13,7 +13,7 @@
 <!-- Form for passenger passports (up to three) -->
 <!-- Passports have the format LETTER + 8 DIGITS -->
 <!-- ^[A-Z]\d{8}$ -->
-<form action="/crear_reserva.php?id=<?= $flight->id ?>" method="post">
+<form action="crear_reserva.php?id=<?= $flight->id ?>" method="post">
     <div class="form-group">
         <label for="passport0">Pasaporte 1</label>
         <input type="text" class="form-control" id="passport0" name="passport0" pattern="^[A-Z]\d{8}$" min="9" max="9" required>
