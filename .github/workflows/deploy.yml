@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -49,6 +50,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY_PROD }}
           script: |
             export PGPASSWORD=${{ secrets.GRUPO27_PASSWORD }}
+            psql -h localhost -U grupo27 -d grupo27e3 -f migrations/drop_all_functions.sql
             psql -h localhost -U grupo27 -d grupo27e3 -f migrations/generate_reservation.sql
             psql -h localhost -U grupo27 -d grupo27e3 -f migrations/generate_ticket.sql
             psql -h localhost -U grupo27 -d grupo27e3 -f migrations/has_schedule_conflict.sql
@@ -63,5 +65,5 @@ jobs:
           username: ${{ secrets.REMOTE_USER_PROD }}
           key: ${{ secrets.SSH_PRIVATE_KEY_PROD }}
           script: |
-            cp /home/grupo27/repo/README.md /home/grupo27/Entrega3
-            cp -r /home/grupo27/repo/functions /home/grupo27/Entrega3/
+            cp -v /home/grupo27/repo/README.md /home/grupo27/Entrega3
+            cp -Trv /home/grupo27/repo/functions /home/grupo27/Entrega3/procedures/
