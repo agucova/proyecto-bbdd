@@ -133,4 +133,8 @@ Para logearse en la aplicación debes usar uno de los usuarios y contraseñas ex
 
 - **Pasajero**: Para cada pasajero creamos un usuario de tipo pasajero, con username su número de pasaporte, y una clave que compone su nombre, número de pasaporte y un string random de largo 5 utilizando la función random_string nuevamente.
 
- Todo el código referente a estos procedimientos se encuentra en el archivo ```importar.php```
+ Todo el código referente a estos procedimientos se encuentra en el archivo ```importar_usuarios.php```
+
+ ### Feature extra
+
+ No la implementamos (?)
