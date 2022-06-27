@@ -6,7 +6,7 @@ Para logearse en la aplicación debes usar uno de los usuarios y contraseñas ex
 
 
   nombre   |               clave                |      tipo
------------+------------------------------------+----------------
+-----------|------------------------------------|----------------
  DGAC      | admin                              | admin_dgac
  ADC       | lktTaIyS0u                         | compañia_aerea
  AZI       | n4jKjIWqAC                         | compañia_aerea
