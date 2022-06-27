@@ -105,3 +105,9 @@
 .logout-button {
     width: 300px;
 }
+
+.button-centered {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}

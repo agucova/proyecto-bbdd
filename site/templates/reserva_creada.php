@@ -1,30 +1,12 @@
-<?php $this->layout('layout', ['title' => 'Entrega 3 BBDD - Grupo 27 y 44', 'description' => "Este es un proyecto de BBDD (IIC2413) que demuestra la capacidad de procesar datos, cargarlos a una base de datos, generar consultas complejas y mostrarlas en una página web."]) ?>
+<?php $this->layout('layout', ['title' => 'Entrega 3 BBDD - Reserva exitosa', 'description' => "Este es un proyecto de BBDD (IIC2413) que demuestra la capacidad de procesar datos, cargarlos a una base de datos, generar consultas complejas y mostrarlas en una página web."]) ?>
 
-<style>
-    body {
-        max-width: 1400px;
-    }
-</style>
+<h1>Sobre tu reserva</h1>
 
-<h1 class="reserves-title">Reservas</h1>
-<div class="reserver-info">
-    <div><b>Iniciado sesión como:</b></div>
-    <div class="reserver-name">👤 <?= $passenger->nombre ?></div>
-    <div class="reserver-passport">🛂 <?= $passenger->pasaporte ?></div>
-    <br />
-    <!-- Search for new flights button -->
-    <form>
-        <button class="button-centered" type="submit" action="/buscar_vuelo.php" method="get" target="_blank">
-            🔎 Buscar nuevo vuelo
-        </button>
-    </form>
-</div>
+<p>✅ Tu reserva fue creada exitosamente con el código <?= $reservation->codigo ?>.</p>
 
-<!-- List of reservations in $reservations -->
-<?php foreach ($reservations as $reservation) : ?>
-    <h3 class="reserve-title">Reserva <?= $reservation["codigo"] ?></h3>
+<h2 class="reserve-title">Reserva <?= $reservation->codigo ?></h3>
     <div class="ticket-grid">
-        <?php foreach ($reservation["tickets"] as $ticket) : ?>
+        <?php foreach ($tickets as $ticket) : ?>
             <div class="ticket">
                 <h4 class="ticket-title">
                     Ticket
@@ -70,13 +52,7 @@
             </div>
         <?php endforeach ?>
     </div>
-<?php endforeach ?>
-<br />
-<hr />
 
-<div class="logout-container">
-    <button class="logout-button" type="button" onclick="window.location.href = 'logout.php'">Cerrar Sesión</button>
-</div>
 
 <script>
     // Scan for <time> tags and populate them with localized datetime strings
@@ -95,3 +71,10 @@
         }) + " GMT" + timezone;
     });
 </script>
+
+
+<form>
+    <button class="button-centered" type="submit" action="/pasajero.php" method="get" target="_blank">
+        Volver a mis reservas
+    </button>
+</form>

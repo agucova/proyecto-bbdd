@@ -8,7 +8,7 @@ $templates = new League\Plates\Engine("templates/");
 session_start();
 $user = isset($_SESSION['user']) ? $_SESSION['user'] : null;
 
-// If user is not logged in, redirect to login page
+// Check that it's logged in
 if (!$user) {
     header('Location: login.php');
     exit;
@@ -20,24 +20,39 @@ if ($user['tipo'] != 'pasajero') {
     exit;
 }
 
-// Find passenger by their passport, which is the user's name
-$queryPassenger = $pdo27->prepare('SELECT * FROM pasajero WHERE pasaporte = :pasaporte');
-$queryPassenger->execute([
-    'pasaporte' => $user["nombre"]
-]);
-$passenger = $queryPassenger->fetchObject();
+// Get flight id and reservation id from _GET
+$flight_id = $_GET['flight-id'];
+$reservation_id = $_GET['reservation-id'];
 
-// Find reservations made by the passenger
-$queryReservations = $pdo27->prepare('SELECT * FROM reserva WHERE id_reservante = :id_pasajero');
-$queryReservations->execute([
-    'id_pasajero' => $passenger->id
-]);
-$reservations = $queryReservations->fetchAll();
+// Get flight and reservation from database
+$query_flight = $pdo27->prepare('SELECT * FROM vuelo WHERE id = :flight_id');
+$query_flight->execute([':flight_id' => $flight_id]);
+$flight = $query_flight->fetchObject();
 
-// Find the tickets in each reservation
-foreach ($reservations as $key => $reservation) {
-    $queryTickets = $pdo27->prepare(
-        "SELECT
+// If flight not found show error
+if (!$flight) {
+    http_response_code(404);
+    echo $templates->render('error', [
+        'error' => 'Vuelo no encontrado.'
+    ]);
+    exit;
+}
+
+$query_reservation = $pdo27->prepare('SELECT * FROM reserva WHERE id = :reservation_id');
+$query_reservation->execute([':reservation_id' => $reservation_id]);
+$reservation = $query_reservation->fetchObject();
+
+// If reservation not found show error
+if (!$reservation) {
+    http_response_code(404);
+    echo $templates->render('error', [
+        'error' => 'Reserva no encontrada.'
+    ]);
+    exit;
+}
+
+$query_ticket = $pdo27->prepare(
+    "SELECT
           reserva.codigo as codigo_reserva,
           pasajero.nombre as nombre_pasajero,
           pasajero.pasaporte,
@@ -67,13 +82,19 @@ foreach ($reservations as $key => $reservation) {
           join pasajero on ticket.id_pasajero = pasajero.id
           join reserva on ticket.id_reserva = reserva.id
         where
-          reserva.id = :id_reserva");
-    
-    $queryTickets->execute([
-        'id_reserva' => $reservation["id"]
+          reserva.id = :reservation_id"
+);
+
+$query_ticket->execute([':reservation_id' => $reservation_id]);
+$tickets = $query_ticket->fetchAll();
+
+// If tickets not found show error
+if (!$tickets) {
+    http_response_code(404);
+    echo $templates->render('error', [
+        'error' => 'Tickets no encontrados.'
     ]);
-    $tickets = $queryTickets->fetchAll();
-    $reservations[$key]["tickets"] = $tickets;
+    exit;
 }
 
-echo $templates->render('pasajero', ["passenger" => $passenger, "reservations" => $reservations]);
+echo $templates->render('reserva_creada', ["flight" => $flight, "reservation" => $reservation, "tickets" => $tickets]);

@@ -4,7 +4,23 @@ require 'config/connection.php';
 
 $templates = new League\Plates\Engine("templates/");
 
-# PENDIENTE: ACTUALIZAR PDO44 Y PDO27 CON LO QUE RETORNA EL SP USADO PARA LA PDO44
+// Get user if logged in
+session_start();
+$user = isset($_SESSION['user']) ? $_SESSION['user'] : null;
+
+// If user is not logged in, redirect to login page
+if (!$user) {
+    header('Location: login.php');
+    exit;
+}
+
+// If user is not a passenger, redirect to home
+if ($user['tipo'] != 'admin_dgac') {
+    header('Location: index.php');
+    exit;
+}
+
+# TODO: ACTUALIZAR PDO44 Y PDO27 CON LO QUE RETORNA EL SP USADO PARA LA PDO44
 # Quizas usar un puro procedimiento que sea "update_proposal" en vez de 2 para aceptar y rechazar
 
 // Actualizar el estado del vuelo en la BDD par (fpl_propuesta)

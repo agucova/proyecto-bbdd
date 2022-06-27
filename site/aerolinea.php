@@ -14,6 +14,12 @@ if (!$user) {
     exit;
 }
 
+// If user is not an airline, redirect to home
+if ($user['tipo'] != 'compañia_aerolinea') {
+    header('Location: index.php');
+    exit;
+}
+
 $query = $pdo27->prepare("SELECT
 *
 from vuelo

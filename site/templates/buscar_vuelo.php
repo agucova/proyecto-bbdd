@@ -58,10 +58,9 @@
                     <!-- Plane model -->
                     <td><?= $result['modelo'] ?></td>
                     <td>
-                        <form action="/reservar_vuelo.php" method="post">
-                            <input type="hidden" name="flight-id" value="<?= $result['id'] ?>">
-                            <input type="submit" value="Reservar">
-                        </form>
+                        <button>
+                            <a href="/crear_reserva.php?id=<?= $result['id'] ?>">Reservar</a>
+                        </button>
                     </td>
                 </tr>
             <?php endforeach; ?>
