@@ -38,6 +38,6 @@ if (ini_get("session.use_cookies")) {
 session_destroy();
 
 // If no users were imported return to index with a message in the URI
-header("Location: /?import=-1");
+header("Location: index.php?import=-1");
 
 exit;
