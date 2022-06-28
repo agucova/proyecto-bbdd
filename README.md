@@ -1,10 +1,10 @@
 # Proyecto-BDD
 
-### ¿Cómo logearse en la aplicación?
+## ¿Cómo logearse en la aplicación?
 
 Para logearse en la aplicación debes usar uno de los usuarios y contraseñas existentes de la siguiente lista. Al momento de iniciar sesión, la página redirige a la vista correspondiente para ese tipo de usuario.
 
-
+```
   nombre   |               clave                |      tipo
 -----------|------------------------------------|----------------
  DGAC      | admin                              | admin_dgac
@@ -119,13 +119,14 @@ Para logearse en la aplicación debes usar uno de los usuarios y contraseñas ex
  G96421276 | alexander_martin_G96421276_Vgorq   | pasajero
  W23173820 | gabrielle_alvarez_W23173820_VJdvu  | pasajero
  I78807927 | robert_kelly_I78807927_TPeav       | pasajero
+```
 
 -------
 
 
 <br/>
 
-### ¿Cómo asignaron contraseñas a los usuarios existentes, y cómo registraron al personal administrativo cómo usuarios?
+## ¿Cómo asignaron contraseñas a los usuarios existentes, y cómo registraron al personal administrativo cómo usuarios?
 
 - **Admin DGAC**: Creamos (si es que no existe) un usuario llamado DGAC con la contraseña admin y de tipo admin_dgac.
 
@@ -133,11 +134,12 @@ Para logearse en la aplicación debes usar uno de los usuarios y contraseñas ex
 
 - **Pasajero**: Para cada pasajero creamos un usuario de tipo pasajero, con username su pasaporte, y una clave que se compone de su nombre, número de pasaporte y un string random de largo 5 utilizando la función random_string nuevamente, todo separado por guiones bajos.
 
- Todo el código referente a estos procedimientos se encuentra en el archivo ```importar_usuarios.php```
+ Todo el código referente a estos procedimientos se encuentra en el archivo `procedures/import_users.sql`
 
- ### Consideraciones adicionales
- - Para crear una nueva reserva se utilizan 4 procedimientos almacenados, dos de ellos para verificar si los pasaportes son válidos y si no existe un tope horario, llamados ```is_passport_valid``` y ```has_schedule_conflict``` respectivamente, mientras que los otros dos, de nombre ```generate_reservation``` y ```generate_ticket``` se encargan de generar la reserva y los tickets asociados a esta. 
- 
- ### Feature extra
+ ## Consideraciones adicionales
+ - Para crear una nueva reserva se utilizan 4 procedimientos almacenados, dos de ellos para verificar si los pasaportes son válidos y si no existe un tope horario, llamados `is_passport_valid` y `has_schedule_conflict` respectivamente, mientras que los dos restantes, de nombre `generate_reservation` y `generate_ticket`, se encargan de generar la reserva y los tickets asociados a esta.
+ - Separamos las vistas de los controladores mediante la utilización de plantillas correspondientes a cada vista, las cuales se encuentran en la carpeta `templates`, mientras que los controladores se encuentran directamente en la carpeta `Sites/`.
 
- No la implementamos (?)
+ ## Feature extra
+
+ No implementamos una funcionalidad adicional.
