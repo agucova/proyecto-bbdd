@@ -41,7 +41,7 @@ jobs:
           REMOTE_HOST: ${{ secrets.REMOTE_HOST_PROD }}
           REMOTE_USER: ${{ secrets.REMOTE_USER_PROD }}
           TARGET: /home/grupo27/repo
-      
+
       - name: Run migrations to database 27
         uses: appleboy/ssh-action@master
         with:
@@ -50,13 +50,13 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY_PROD }}
           script: |
             export PGPASSWORD=${{ secrets.GRUPO27_PASSWORD }}
-            psql -h localhost -U grupo27 -d grupo27e3 -f migrations/drop_all_functions.sql
-            psql -h localhost -U grupo27 -d grupo27e3 -f migrations/generate_reservation.sql
-            psql -h localhost -U grupo27 -d grupo27e3 -f migrations/generate_ticket.sql
-            psql -h localhost -U grupo27 -d grupo27e3 -f migrations/has_schedule_conflict.sql
-            psql -h localhost -U grupo27 -d grupo27e3 -f migrations/is_passport_valid.sql
-            psql -h localhost -U grupo27 -d grupo27e3 -f migrations/import_users.sql
-            psql -h localhost -U grupo27 -d grupo27e3 -f migrations/patch_serial.sql
+            psql -h localhost -U grupo27 -d grupo27e3 -f repo/functions/drop_all_functions.sql
+            psql -h localhost -U grupo27 -d grupo27e3 -f repo/functions/generate_reservation.sql
+            psql -h localhost -U grupo27 -d grupo27e3 -f repo/functions/generate_ticket.sql
+            psql -h localhost -U grupo27 -d grupo27e3 -f repo/functions/has_schedule_conflict.sql
+            psql -h localhost -U grupo27 -d grupo27e3 -f repo/functions/is_passport_valid.sql
+            psql -h localhost -U grupo27 -d grupo27e3 -f repo/functions/import_users.sql
+            psql -h localhost -U grupo27 -d grupo27e3 -f repo/functions/patch_serial.sql
 
       - name: Update E3 folder.
         uses: appleboy/ssh-action@master
