@@ -47,7 +47,7 @@
         <tbody>
             <?php foreach ($results as $result) : ?>
                 <!-- Debug: print result -->
-                <?php // var_dump($result) 
+                <?php // var_dump($result)
                 ?>
                 <tr>
                     <td><?= $result['aeropuerto_origen'] ?></td>
@@ -62,7 +62,7 @@
                     <td><?= $result['modelo'] ?></td>
                     <td>
                         <button>
-                            <a href="/crear_reserva.php?id=<?= $result['id'] ?>">Reservar</a>
+                            <a href="crear_reserva.php?id=<?= $result['id'] ?>">Reservar</a>
                         </button>
                     </td>
                 </tr>
