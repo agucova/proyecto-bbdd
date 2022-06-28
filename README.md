@@ -135,6 +135,9 @@ Para logearse en la aplicación debes usar uno de los usuarios y contraseñas ex
 
  Todo el código referente a estos procedimientos se encuentra en el archivo ```importar_usuarios.php```
 
+ ### Consideraciones adicionales
+ - Para crear una nueva reserva se utilizan 4 procedimientos almacenados, dos de ellos para verificar si los pasaportes son válidos y si no existe un tope horario, llamados ```is_passport_valid``` y ```has_schedule_conflict``` respectivamente, mientras que los otros dos, de nombre ```generate_reservation``` y ```generate_ticket``` se encargan de generar la reserva y los tickets asociados a esta. 
+ 
  ### Feature extra
 
  No la implementamos (?)
