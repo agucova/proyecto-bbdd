@@ -11,6 +11,6 @@ $query = $pdo27->query("SELECT
 $users_imported = $query->fetchObject()->import_users;
 
 // If no users were imported return to index with a message in the URI
-header("Location: /?import=$users_imported");
+header("Location: ?import=$users_imported");
 
 exit;
