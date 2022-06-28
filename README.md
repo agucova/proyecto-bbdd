@@ -122,7 +122,6 @@ Para logearse en la aplicación debes usar uno de los usuarios y contraseñas ex
 </pre>
 </details>
 
-<br/>
 
 ## ¿Cómo asignaron contraseñas a los usuarios existentes, y cómo registraron al personal administrativo cómo usuarios?
 
