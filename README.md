@@ -133,11 +133,11 @@ Para logearse en la aplicación debes usar uno de los usuarios y contraseñas ex
 
 - **Pasajero**: Para cada pasajero creamos un usuario de tipo pasajero, con username su pasaporte, y una clave que se compone de su nombre, número de pasaporte y un string random de largo 5 utilizando la función random_string nuevamente, todo separado por guiones bajos.
 
- Todo el código referente a estos procedimientos se encuentra en el archivo ```importar_usuarios.php```
+ Todo el código referente a estos procedimientos se encuentra en el archivo ```import_users.sql```
 
  ### Consideraciones adicionales
- - Para crear una nueva reserva se utilizan 4 procedimientos almacenados, dos de ellos para verificar si los pasaportes son válidos y si no existe un tope horario, llamados ```is_passport_valid``` y ```has_schedule_conflict``` respectivamente, mientras que los otros dos, de nombre ```generate_reservation``` y ```generate_ticket``` se encargan de generar la reserva y los tickets asociados a esta. 
+ - Para crear una nueva reserva se utilizan 4 procedimientos almacenados, dos de ellos para verificar si los pasaportes son válidos y si no existe un tope horario, llamados ```is_passport_valid``` y ```has_schedule_conflict``` respectivamente, mientras que los dos restantes, de nombre ```generate_reservation``` y ```generate_ticket```, se encargan de generar la reserva y los tickets asociados a esta. 
  
  ### Feature extra
 
- No la implementamos (?)
+ No implementamos una funcionalidad adicional.
