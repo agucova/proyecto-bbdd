@@ -22,6 +22,13 @@ if ($user['tipo'] != 'pasajero') {
     exit;
 }
 
+// Find passenger by their passport, which is the user's name
+$queryPassenger = $pdo27->prepare('SELECT * FROM pasajero WHERE pasaporte = :pasaporte');
+$queryPassenger->execute([
+    'pasaporte' => $user["nombre"]
+]);
+$passenger = $queryPassenger->fetchObject();
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Process form data
     $origin = $_POST['origin-city'];
@@ -63,6 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $error = 'Fecha de salida inválida';
         // Render the template with the error
         echo $templates->render('buscar_vuelo', [
+            'passenger' => $passenger,
             'results' => null,
             'error' => $error,
             'origin-city' => $origin,
@@ -78,6 +86,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Return results
     echo $templates->render('buscar_vuelo', [
+        'passenger' => $passenger,
         'results' => $results,
         'error' => null,
         'origin-city' => $origin,
@@ -89,6 +98,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 } else {
     // Default search form 
     echo $templates->render('buscar_vuelo', [
+        'passenger' => $passenger,
         'results' => null,
         'error' => null,
         'origin-city' => "",

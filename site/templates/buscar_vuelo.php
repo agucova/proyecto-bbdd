@@ -1,6 +1,31 @@
 <?php $this->layout('layout', ['title' => 'Entrega 3 BBDD - Buscar vuelos', 'description' => "Este es un proyecto de BBDD (IIC2413) que demuestra la capacidad de procesar datos, cargarlos a una base de datos, generar consultas complejas y mostrarlas en una página web."]) ?>
 
+<style>
+    body {
+        text-align: center;
+    }
+
+    /* Center all non-submit input and selects, along with their labels */
+    input,
+    select {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+</style>
+
 <h1>🔍 Buscar vuelos</h1>
+<div class="user-info">
+    <div><b>Iniciado sesión como:</b></div>
+    <div class="user-name">👤 <?= $passenger->nombre ?></div>
+    <div class="reserver-passport">🛂 <?= $passenger->pasaporte ?></div>
+    <br />
+    <button class="logout-button" type="button" onclick="window.location.href = 'logout.php'">🔐 Cerrar Sesión</button>
+    <button class="button-centered" onclick="window.location.href='pasajero.php'">
+        📄 Volver a mis reservas
+    </button>
+</div>
 
 <!-- If $error is not null, display the search error -->
 
@@ -12,15 +37,15 @@
 <!-- Search flights by origin city, destination city and departure date -->
 <form action="buscar_vuelo.php" method="post">
     <label for="origin-city">Ciudad de origen:</label>
-    <select name="origin-city" id="origin-city">
-        <option value="<?= $origin_city ?>">Seleccione una ciudad</option>
+    <select name="origin-city" id="origin-city" required>
+        <!-- Auto-filled -->
     </select>
     <label for="destination-city">Ciudad de destino:</label>
-    <select name="destination-city" id="destination-city">
-        <option value="<?= $destination_city ?>">Seleccione una ciudad</option>
+    <select name="destination-city" id="destination-city" required>
+        <!-- Auto-filled -->
     </select>
     <label for="departure-date">Fecha de salida:</label>
-    <input type="date" name="departure-date" id="departure-date">
+    <input type="date" name="departure-date" id="departure-date" value="2022-06-25" required>
     <input type="submit" value="🔍 Buscar vuelos">
 </form>
 
@@ -104,6 +129,9 @@
                     let option = document.createElement('option');
                     option.value = city["nombre_ciudad"] + ", " + city["nombre_pais"];
                     option.innerText = city['nombre_ciudad'] + ", " + city['nombre_pais'];
+                    if (city['nombre_ciudad'] == 'Ibiza') {
+                        option.selected = true;
+                    }
                     origin_city_select.appendChild(option);
                 });
 
@@ -111,6 +139,9 @@
                     let option = document.createElement('option');
                     option.value = city["nombre_ciudad"] + ", " + city["nombre_pais"];
                     option.innerText = city['nombre_ciudad'] + ", " + city['nombre_pais'];
+                    if (city['nombre_ciudad'] == 'Hong Kong') {
+                        option.selected = true;
+                    }
                     destination_city_select.appendChild(option);
                 });
             });
