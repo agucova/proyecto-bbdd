@@ -48,7 +48,7 @@
         <?php elseif ($import == -1) : ?>
             Se borraron todos los usuarios exitosamente.
         <?php else : ?>
-            Se importaron <?= $import ?> usuarios exitosamente.
+            Se importaron <?= $users_imported ?> usuarios exitosamente y se saltaron <?= $admin_errors ?> admins, <?= $airline_errors ?> aerolineas y <?= $passenger_errors ?> pasajeros que ya existían en la base de datos.
         <?php endif ?>
     </p>
 <?php else : ?>
