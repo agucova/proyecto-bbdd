@@ -46,9 +46,8 @@
                 </div>
                 <hr />
                 <div class="upgrade-status">
-                    <? $comida_y_maleta = $ticket["comida_y_maleta"] ?>
                     <p class="ticket-food-and-luggage">
-                        <?php if ($comida_y_maleta) : ?>
+                        <?php if ($ticket["comida_y_maleta"]) : ?>
                             Incluye comida y maleta
                         <?php else : ?>
                             No incluye comida y maleta
