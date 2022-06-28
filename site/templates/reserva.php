@@ -48,11 +48,11 @@
                 <div class="upgrade-status">
                     <? $comida_y_maleta = $ticket["comida_y_maleta"] ?>
                     <p class="ticket-food-and-luggage">
-                        <? if ($comida_y_maleta) : ?>
+                        <?php if ($comida_y_maleta) : ?>
                             Incluye comida y maleta
-                        <? else : ?>
+                        <?php else : ?>
                             No incluye comida y maleta
-                        <? endif ?>
+                        <?php endif ?>
                     </p>
                 </div>
             </div>
